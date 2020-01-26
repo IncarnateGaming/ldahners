@@ -1,0 +1,41 @@
+.inc-indentation{
+  margin-left:auto;
+  margin-right:auto;
+  overflow-x:scroll;
+  -ms-overflow-style: none;
+}
+.inc-indentation::-webkit-scrollbar{
+  display:none;
+}
+.mobile .inc-indentation{
+  margin-left:0 !important;
+  margin-right: 0 !important;
+  min-width:100%;
+}
+@media (orientation: portrait) {
+  .inc-indentation{
+    margin-left:0 !important;
+    margin-right: 0 !important;
+    min-width:100%;
+  }
+}
+@media (min-width: 576px) {
+  .inc-indentation {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .inc-indentation {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .inc-indentation {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .inc-indentation {
+    max-width: 1140px;
+  }
+}

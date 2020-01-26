@@ -1,0 +1,11 @@
+@use 'sass:map';
+$theme-colors: (
+        "primary":#00D,
+        "secondary":#00D0FF,
+        "success":#129c19,
+        "danger": #d90005,
+        "warning":#d96100,
+        "info":#00a1c5,
+        "light": #BDF2FE,
+        "dark":#000000
+);

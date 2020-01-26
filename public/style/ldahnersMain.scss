@@ -1,0 +1,93 @@
+@use 'sass:map';
+@import 'ldahnersColors';
+@import 'policy.scss';
+@import 'incContainer.scss';
+body{
+  height:100vh;
+}
+//Flex
+.inc-flex-300{
+  flex: 0 0 18rem;
+}
+.inc-flex-200{
+  flex: 0 0 12rem;
+}
+.inc-flex-auto{
+  flex: 0 0 auto;
+}
+.inc-flex-grow{
+  flex: 1;
+}
+// Header
+#incarnate-logo img{
+  height:60px
+}
+nav.inc-sticky-header{
+  position:fixed;
+  top:0;
+  width:100%;
+}
+.inc-body{
+  padding-top:5.4rem;
+}
+#incarnate-logo{
+  display:none;
+}
+nav.inc-sticky-header button:hover{
+  background-color: var(--light);
+  color:var(--primary);
+  border-color:(--primary);
+  box-shadow: 0.5rem 0.5rem var(--dark);
+}
+
+
+
+.inc-flex-orientation{
+  display:flex;
+  flex-direction:column;
+}
+@media (orientation: landscape) {
+  #incarnate-logo{
+    display:block;
+  }
+  .inc-flex-orientation{
+    flex-direction: row;
+  }
+  @media (min-width: 870px) {
+    .navbar-toggler{
+      display:none;
+    }
+    nav.inc-sticky-header{
+      width:14rem;
+    }
+    nav.inc-sticky-header div.collapse{
+      display:block;
+    }
+    .inc-nav-body{
+      display:flex;
+    }
+    .inc-nav-flex-holder{
+      flex: 0 0 14rem;
+    }
+    .inc-body{
+      flex: 1;
+      padding-top:unset;
+      padding-left:0.1rem;
+      padding-right:0.1rem;
+    }
+  }
+}
+@media (min-width: 450px) {
+  #incarnate-logo{
+    display:block;
+  }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@import '../bootstrap-4.0.0/scss/bootstrap.scss';

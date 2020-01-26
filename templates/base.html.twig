@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html id="inc-top-html">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="shortcut icon" href="{{asset('/assets/art/physical/Help (skeletons) small file-tiny.jpg')}}" type="image/x-icon">
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('/style/ldahnersMain.css') }}">
+        {% endblock %}
+        <script src="{{ asset('packs/js/cookies.js') }}"></script>
+        <script>
+            var incarnateDomain = 'ldahners.incarnategamingllc.com';
+        </script>
+        <script src="{{ asset('packs/js/hooks.js') }}"></script>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="inc-nav-body">
+            <div class="inc-nav-flex-holder"></div>
+            <div class="inc-body inc-flex-grow">
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                {% block body_indentation %}
+                    <div class="inc-indentation mt-2">
+                        {% block body %}{% endblock %}
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+        <footer class="page-footer font-small bg-primary">
+            <div class="footer-copyright text-center py-3 text-light">
+            © 2020 <a class="text-light" href="https://www.incarnategamingllc.com/hire/">Incarnate Gaming LLC</a>
+            </div>
+        </footer>
+        <nav class="navbar navbar-light bg-primary inc-sticky-header" id="navbar">
+            <a id="incarnate-logo" class="navbar-brand text-light" href="/"><img src="{{ asset('/assets/art/physical/Help (skeletons) small file-tiny.jpg') }}">Laury Dahners</a>
+            <button class="navbar-toggler bg-secondary text-light ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse overflow-auto" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <button class="btn btn-primary m-2" onclick="window.location.href='{{ path('app_home')|index_stripper }}'">Home</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary m-2" onclick="window.location.href='{{ path('app_stories')|index_stripper }}'">Novels & Short Stories</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary m-2" onclick="window.location.href='{{ path('app_songs_vocal')|index_stripper }}'">Songs</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary m-2" onclick="window.location.href='{{ path('app_songs_instrumental')|index_stripper }}'">Instrumental Music</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary m-2" onclick="window.location.href='{{ path('app_art_digital')|index_stripper }}'">Digital Art</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary m-2" onclick="window.location.href='{{ path('app_art_physical')|index_stripper }}'">Art</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary m-2" onclick="window.location.href='{{ path('app_charity')|index_stripper }}'">Charity Surgery</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary m-2" onclick="window.location.href='{{ path('app_professional')|index_stripper }}'">Orthopedic</button>
+                    </li>
+                    {#                    <li class="nav-item">#}
+                    {#                        <button class="btn btn-primary m-2" id="contentDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content</button>#}
+                    {#                        <div class="dropdown-menu overflow-auto" aria-labelledby="contentDropdown">#}
+                    {#                            <a class="dropdown-item text-primary" href="{{ path('inc_backgrounds')|index_stripper }}">Backgrounds</a>#}
+                    {#                        </div>#}
+                    {#                    </li>#}
+                    <button class="btn btn-secondary m-2" id="topButton" type="button" aria-label="Navigate to Top">Top</button>
+                    {% block backButton %}{% endblock %}
+                </ul>
+            </div>
+        </nav>
+        {% block javascripts %}
+            <script>
+                var IncarnateAnalyticsTag = 'UA-155417623-1';
+            </script>
+            <script src="{{asset('packs/js/navFunctions.js')}}"></script>
+            <script src="{{ asset('packs/js/orientation.js') }}"></script>
+            <script src="{{ asset('packs/js/analytics.js') }}"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+{#            {% block policyAccept %}<script src="{{ asset('packs/js/policyAccept.js') }}"></script>{% endblock %}#}
+        {% endblock %}
+    </body>
+</html>

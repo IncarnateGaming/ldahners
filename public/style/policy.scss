@@ -1,0 +1,7 @@
+@use 'sass:map';
+@import 'ldahnersColors';
+.incarnate-policy-banner{
+  position:fixed;
+  bottom:0;
+  background: var(--light);
+}
