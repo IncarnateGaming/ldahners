@@ -2,8 +2,9 @@
 @import 'ldahnersColors';
 @import 'policy.scss';
 @import 'incContainer.scss';
-body{
+html body{
   height:100vh;
+  background-color: var(--ldahners5);
 }
 //Flex
 .inc-flex-300{
@@ -26,6 +27,12 @@ nav.inc-sticky-header{
   position:fixed;
   top:0;
   width:100%;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  -ms-overflow-style: none;
+}
+nav.inc-sticky-header::-webkit-scrollbar {
+  display: none;
 }
 .inc-body{
   padding-top:5.4rem;
@@ -35,11 +42,25 @@ nav.inc-sticky-header{
 }
 nav.inc-sticky-header button:hover{
   background-color: var(--light);
-  color:var(--primary);
+  color:var(--dark);
   border-color:(--primary);
   box-shadow: 0.5rem 0.5rem var(--dark);
 }
+.inc-banners{
+  background-color:var(--primary);
+}
+button.inc-button-color{
+  background-color: var(--secondary);
+}
+nav .collapse.show{
+  height:calc(100% - 30rem);
+}
 
+footer.page-footer{
+  left:-2px;
+  position:relative;
+  width: calc(100% + 2px);
+}
 
 
 .inc-flex-orientation{
@@ -59,6 +80,7 @@ nav.inc-sticky-header button:hover{
     }
     nav.inc-sticky-header{
       width:14rem;
+      height:100vh;
     }
     nav.inc-sticky-header div.collapse{
       display:block;

@@ -1,11 +1,27 @@
 @use 'sass:map';
+:root{
+  --ldahners1:#BDF2FE;
+  --ldahners1-dark: #526a6f;
+  --ldahners2:#00D0FF;
+  --ldahners2-dark: #00596d;
+  --ldahners3:#D4E5E5;
+  --ldahners3-dark: #616969;
+  --ldahenrs4:#ECFBFF;
+  --ldahenrs4-dark: #6e7577;
+  --ldahners5:#E1EDF0;
+  --ldahners5-dark: #6d7375;
+  --ldahners6:#A1ECFF;
+  --ldahners6-dark: #3e5c63;
+  --ldahenrs7:#FFE0A1;
+  --ldahenrs7-dark: #726549;
+}
 $theme-colors: (
-        "primary":#00D,
-        "secondary":#00D0FF,
+        "primary":#00D0FF,
+        "secondary":#ECFBFF,
         "success":#129c19,
         "danger": #d90005,
         "warning":#d96100,
-        "info":#00a1c5,
+        "info":#726549,
         "light": #BDF2FE,
         "dark":#000000
 );
