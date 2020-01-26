@@ -97,8 +97,9 @@
 {#            {% block policyAccept %}<script src="{{ asset('packs/js/policyAccept.js') }}"></script>{% endblock %}#}
             <script src="{{ asset('packs/js/colorTryer.js') }}"></script>
             <script>
-                IncarnateColorTryer.build('inc-nav-body','background-color','Background Color');
-                IncarnateColorTryer.build('inc-banners','background-color','Header Footer Color');
+                IncarnateColorTryer.build('inc-nav-body','color','Page Text Color');
+                IncarnateColorTryer.build('inc-nav-body','background-color','Page Background Color');
+                IncarnateColorTryer.build('inc-banners','background-color','Header Footer Background Color');
                 IncarnateColorTryer.build('inc-button-color','background-color','Button Color');
             </script>
         {% endblock %}

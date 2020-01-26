@@ -16,6 +16,22 @@
   --ldahenrs7-dark: #726549;
 }
 
+.inc-bg-primary {
+  background-color: var(--primary);
+}
+
+.inc-bg-secondary {
+  background-color: var(--secondary);
+}
+
+.inc-bg-light {
+  background-color: var(--light);
+}
+
+.inc-bg-dark {
+  background-color: var(--dark);
+}
+
 :root {
   --ldahners1:#BDF2FE;
   --ldahners1-dark: #526a6f;
@@ -31,6 +47,22 @@
   --ldahners6-dark: #3e5c63;
   --ldahenrs7:#FFE0A1;
   --ldahenrs7-dark: #726549;
+}
+
+.inc-bg-primary {
+  background-color: var(--primary);
+}
+
+.inc-bg-secondary {
+  background-color: var(--secondary);
+}
+
+.inc-bg-light {
+  background-color: var(--light);
+}
+
+.inc-bg-dark {
+  background-color: var(--dark);
 }
 
 .incarnate-policy-banner {
@@ -54,6 +86,22 @@
   --ldahners6-dark: #3e5c63;
   --ldahenrs7:#FFE0A1;
   --ldahenrs7-dark: #726549;
+}
+
+.inc-bg-primary {
+  background-color: var(--primary);
+}
+
+.inc-bg-secondary {
+  background-color: var(--secondary);
+}
+
+.inc-bg-light {
+  background-color: var(--light);
+}
+
+.inc-bg-dark {
+  background-color: var(--dark);
 }
 
 .inc-indentation {
