@@ -20,7 +20,8 @@ html body{
 .inc-flex-grow{
   flex: 1;
 }
-// Header
+//Header - Part 1
+
 #incarnate-logo img{
   height:60px
 }
@@ -62,13 +63,13 @@ footer.page-footer{
   flex-direction:column;
 }
 @media (orientation: landscape) {
-  #incarnate-logo{
-    display:block;
-  }
   .inc-flex-orientation{
     flex-direction: row;
   }
   @media (min-width: 870px) {
+    #incarnate-logo{
+      display:block;
+    }
     .navbar-toggler{
       display:none;
     }
@@ -111,3 +112,8 @@ a {
   color: var(--ldahners2-dark);
 }
 
+
+// Header
+.navbar-toggler-icon{
+  background-image: $navbar-light-toggler-icon-bg;
+}

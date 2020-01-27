@@ -48,116 +48,132 @@ html .inc-text-dark {
   color: var(--dark);
 }
 
-.inc-bg-ldahners1 {
+html .inc-bg-ldahners1 {
   background-color: #BDF2FE;
 }
 
-.inc-bg-ldahners1-dark {
+html .inc-bg-ldahners1-dark {
   background-color: #526a6f;
 }
 
-.inc-bg-ldahners2 {
+html .inc-bg-ldahners2 {
   background-color: #00D0FF;
 }
 
-.inc-bg-ldahners2-dark {
+html .inc-bg-ldahners2-dark {
   background-color: #00596d;
 }
 
-.inc-bg-ldahners3 {
+html .inc-bg-ldahners3 {
   background-color: #D4E5E5;
 }
 
-.inc-bg-ldahners3-dark {
+html .inc-bg-ldahners3-dark {
   background-color: #616969;
 }
 
-.inc-bg-ldahners4 {
+html .inc-bg-ldahners4 {
   background-color: #ECFBFF;
 }
 
-.inc-bg-ldahners4-dark {
+html .inc-bg-ldahners4-dark {
   background-color: #6e7577;
 }
 
-.inc-bg-ldahners5 {
+html .inc-bg-ldahners5 {
   background-color: #E1EDF0;
 }
 
-.inc-bg-ldahners5-dark {
+html .inc-bg-ldahners5-dark {
   background-color: #6d7375;
 }
 
-.inc-bg-ldahners6 {
+html .inc-bg-ldahners6 {
   background-color: #A1ECFF;
 }
 
-.inc-bg-ldahners6-dark {
+html .inc-bg-ldahners6-dark {
   background-color: #3e5c63;
 }
 
-.inc-bg-ldahners7 {
+html .inc-bg-ldahners7 {
   background-color: #FFE0A1;
 }
 
-.inc-bg-ldahners7-dark {
+html .inc-bg-ldahners7-dark {
   background-color: #726549;
 }
 
-.inc-text-ldahners1 {
+html .inc-bg-black {
+  background-color: black;
+}
+
+html .inc-bg-white {
+  background-color: white;
+}
+
+html .inc-text-ldahners1 {
   color: #BDF2FE;
 }
 
-.inc-text-ldahners1-dark {
+html .inc-text-ldahners1-dark {
   color: #526a6f;
 }
 
-.inc-text-ldahners2 {
+html .inc-text-ldahners2 {
   color: #00D0FF;
 }
 
-.inc-text-ldahners2-dark {
+html .inc-text-ldahners2-dark {
   color: #00596d;
 }
 
-.inc-text-ldahners3 {
+html .inc-text-ldahners3 {
   color: #D4E5E5;
 }
 
-.inc-text-ldahners3-dark {
+html .inc-text-ldahners3-dark {
   color: #616969;
 }
 
-.inc-text-ldahners4 {
+html .inc-text-ldahners4 {
   color: #ECFBFF;
 }
 
-.inc-text-ldahners4-dark {
+html .inc-text-ldahners4-dark {
   color: #6e7577;
 }
 
-.inc-text-ldahners5 {
+html .inc-text-ldahners5 {
   color: #E1EDF0;
 }
 
-.inc-text-ldahners5-dark {
+html .inc-text-ldahners5-dark {
   color: #6d7375;
 }
 
-.inc-text-ldahners6 {
+html .inc-text-ldahners6 {
   color: #A1ECFF;
 }
 
-.inc-text-ldahners6-dark {
+html .inc-text-ldahners6-dark {
   color: #3e5c63;
 }
 
-.inc-text-ldahners7 {
+html .inc-text-ldahners7 {
   color: #FFE0A1;
 }
 
-.inc-text-ldahners7-dark {
+html .inc-text-ldahners7-dark {
   color: #726549;
+}
+
+html .inc-text-black {
+  color: black;
+}
+
+html .inc-text-black {
+  color: white;
 }
 
 :root {
@@ -209,116 +225,132 @@ html .inc-text-dark {
   color: var(--dark);
 }
 
-.inc-bg-ldahners1 {
+html .inc-bg-ldahners1 {
   background-color: #BDF2FE;
 }
 
-.inc-bg-ldahners1-dark {
+html .inc-bg-ldahners1-dark {
   background-color: #526a6f;
 }
 
-.inc-bg-ldahners2 {
+html .inc-bg-ldahners2 {
   background-color: #00D0FF;
 }
 
-.inc-bg-ldahners2-dark {
+html .inc-bg-ldahners2-dark {
   background-color: #00596d;
 }
 
-.inc-bg-ldahners3 {
+html .inc-bg-ldahners3 {
   background-color: #D4E5E5;
 }
 
-.inc-bg-ldahners3-dark {
+html .inc-bg-ldahners3-dark {
   background-color: #616969;
 }
 
-.inc-bg-ldahners4 {
+html .inc-bg-ldahners4 {
   background-color: #ECFBFF;
 }
 
-.inc-bg-ldahners4-dark {
+html .inc-bg-ldahners4-dark {
   background-color: #6e7577;
 }
 
-.inc-bg-ldahners5 {
+html .inc-bg-ldahners5 {
   background-color: #E1EDF0;
 }
 
-.inc-bg-ldahners5-dark {
+html .inc-bg-ldahners5-dark {
   background-color: #6d7375;
 }
 
-.inc-bg-ldahners6 {
+html .inc-bg-ldahners6 {
   background-color: #A1ECFF;
 }
 
-.inc-bg-ldahners6-dark {
+html .inc-bg-ldahners6-dark {
   background-color: #3e5c63;
 }
 
-.inc-bg-ldahners7 {
+html .inc-bg-ldahners7 {
   background-color: #FFE0A1;
 }
 
-.inc-bg-ldahners7-dark {
+html .inc-bg-ldahners7-dark {
   background-color: #726549;
 }
 
-.inc-text-ldahners1 {
+html .inc-bg-black {
+  background-color: black;
+}
+
+html .inc-bg-white {
+  background-color: white;
+}
+
+html .inc-text-ldahners1 {
   color: #BDF2FE;
 }
 
-.inc-text-ldahners1-dark {
+html .inc-text-ldahners1-dark {
   color: #526a6f;
 }
 
-.inc-text-ldahners2 {
+html .inc-text-ldahners2 {
   color: #00D0FF;
 }
 
-.inc-text-ldahners2-dark {
+html .inc-text-ldahners2-dark {
   color: #00596d;
 }
 
-.inc-text-ldahners3 {
+html .inc-text-ldahners3 {
   color: #D4E5E5;
 }
 
-.inc-text-ldahners3-dark {
+html .inc-text-ldahners3-dark {
   color: #616969;
 }
 
-.inc-text-ldahners4 {
+html .inc-text-ldahners4 {
   color: #ECFBFF;
 }
 
-.inc-text-ldahners4-dark {
+html .inc-text-ldahners4-dark {
   color: #6e7577;
 }
 
-.inc-text-ldahners5 {
+html .inc-text-ldahners5 {
   color: #E1EDF0;
 }
 
-.inc-text-ldahners5-dark {
+html .inc-text-ldahners5-dark {
   color: #6d7375;
 }
 
-.inc-text-ldahners6 {
+html .inc-text-ldahners6 {
   color: #A1ECFF;
 }
 
-.inc-text-ldahners6-dark {
+html .inc-text-ldahners6-dark {
   color: #3e5c63;
 }
 
-.inc-text-ldahners7 {
+html .inc-text-ldahners7 {
   color: #FFE0A1;
 }
 
-.inc-text-ldahners7-dark {
+html .inc-text-ldahners7-dark {
   color: #726549;
+}
+
+html .inc-text-black {
+  color: black;
+}
+
+html .inc-text-black {
+  color: white;
 }
 
 .incarnate-policy-banner {
@@ -376,116 +408,132 @@ html .inc-text-dark {
   color: var(--dark);
 }
 
-.inc-bg-ldahners1 {
+html .inc-bg-ldahners1 {
   background-color: #BDF2FE;
 }
 
-.inc-bg-ldahners1-dark {
+html .inc-bg-ldahners1-dark {
   background-color: #526a6f;
 }
 
-.inc-bg-ldahners2 {
+html .inc-bg-ldahners2 {
   background-color: #00D0FF;
 }
 
-.inc-bg-ldahners2-dark {
+html .inc-bg-ldahners2-dark {
   background-color: #00596d;
 }
 
-.inc-bg-ldahners3 {
+html .inc-bg-ldahners3 {
   background-color: #D4E5E5;
 }
 
-.inc-bg-ldahners3-dark {
+html .inc-bg-ldahners3-dark {
   background-color: #616969;
 }
 
-.inc-bg-ldahners4 {
+html .inc-bg-ldahners4 {
   background-color: #ECFBFF;
 }
 
-.inc-bg-ldahners4-dark {
+html .inc-bg-ldahners4-dark {
   background-color: #6e7577;
 }
 
-.inc-bg-ldahners5 {
+html .inc-bg-ldahners5 {
   background-color: #E1EDF0;
 }
 
-.inc-bg-ldahners5-dark {
+html .inc-bg-ldahners5-dark {
   background-color: #6d7375;
 }
 
-.inc-bg-ldahners6 {
+html .inc-bg-ldahners6 {
   background-color: #A1ECFF;
 }
 
-.inc-bg-ldahners6-dark {
+html .inc-bg-ldahners6-dark {
   background-color: #3e5c63;
 }
 
-.inc-bg-ldahners7 {
+html .inc-bg-ldahners7 {
   background-color: #FFE0A1;
 }
 
-.inc-bg-ldahners7-dark {
+html .inc-bg-ldahners7-dark {
   background-color: #726549;
 }
 
-.inc-text-ldahners1 {
+html .inc-bg-black {
+  background-color: black;
+}
+
+html .inc-bg-white {
+  background-color: white;
+}
+
+html .inc-text-ldahners1 {
   color: #BDF2FE;
 }
 
-.inc-text-ldahners1-dark {
+html .inc-text-ldahners1-dark {
   color: #526a6f;
 }
 
-.inc-text-ldahners2 {
+html .inc-text-ldahners2 {
   color: #00D0FF;
 }
 
-.inc-text-ldahners2-dark {
+html .inc-text-ldahners2-dark {
   color: #00596d;
 }
 
-.inc-text-ldahners3 {
+html .inc-text-ldahners3 {
   color: #D4E5E5;
 }
 
-.inc-text-ldahners3-dark {
+html .inc-text-ldahners3-dark {
   color: #616969;
 }
 
-.inc-text-ldahners4 {
+html .inc-text-ldahners4 {
   color: #ECFBFF;
 }
 
-.inc-text-ldahners4-dark {
+html .inc-text-ldahners4-dark {
   color: #6e7577;
 }
 
-.inc-text-ldahners5 {
+html .inc-text-ldahners5 {
   color: #E1EDF0;
 }
 
-.inc-text-ldahners5-dark {
+html .inc-text-ldahners5-dark {
   color: #6d7375;
 }
 
-.inc-text-ldahners6 {
+html .inc-text-ldahners6 {
   color: #A1ECFF;
 }
 
-.inc-text-ldahners6-dark {
+html .inc-text-ldahners6-dark {
   color: #3e5c63;
 }
 
-.inc-text-ldahners7 {
+html .inc-text-ldahners7 {
   color: #FFE0A1;
 }
 
-.inc-text-ldahners7-dark {
+html .inc-text-ldahners7-dark {
   color: #726549;
+}
+
+html .inc-text-black {
+  color: black;
+}
+
+html .inc-text-black {
+  color: white;
 }
 
 .inc-indentation {
@@ -656,15 +704,15 @@ footer.page-footer {
 }
 
 @media (orientation: landscape) {
-  #incarnate-logo {
-    display: block;
-  }
-
   .inc-flex-orientation {
     flex-direction: row;
   }
 }
 @media (orientation: landscape) and (min-width: 870px) {
+  #incarnate-logo {
+    display: block;
+  }
+
   .navbar-toggler {
     display: none;
   }
@@ -8935,6 +8983,10 @@ h3 {
 }
 a {
   color: var(--ldahners2-dark);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /*# sourceMappingURL=ldahnersMain.css.map */

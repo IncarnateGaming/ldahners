@@ -43,7 +43,9 @@ class IncarnateColorTryer{
             {name:"ldahners6",color:"#A1ECFF"},
             {name:"ldahners6-dark",color:"#3e5c63"},
             {name:"ldahenrs7",color:"#FFE0A1"},
-            {name:"ldahenrs7-dark",color:"#726549"}
+            {name:"ldahenrs7-dark",color:"#726549"},
+            {name:"black",color:"black"},
+            {name:"white",color:"white"}
         ]
     }
 }
