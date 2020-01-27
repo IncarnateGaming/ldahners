@@ -6,98 +6,100 @@
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('/style/Gallery.css') }}">
 {% endblock %}
-{% block body %}
-    <h1>Art</h1>
-    <div class="d-flex flex-row flex-wrap">
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/art hands - touched up.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/art hands - touched up.jpg') }}" class="img-fluid">
-                <p class="art-caption">A sculpted hand, painting a painted hand, which is drawing a drawn hand</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/BG_airbrushmeteorcropped.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/BG_airbrushmeteorcropped.jpg') }}" class="img-fluid">
-                <p class="art-caption">"Meteor"</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/BG_Arck.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/BG_Arck.jpg') }}" class="img-fluid">
-                <p class="art-caption">"Arck"</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/BG_GirlinaRedSkirt.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/BG_GirlinaRedSkirt.jpg') }}" class="img-fluid">
-                <p class="art-caption"></p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/BG_Goddoesnotcastdice.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/BG_Goddoesnotcastdice.jpg') }}" class="img-fluid">
-                <p class="art-caption">"God does not cast dice with the Universe".- Based tongue in cheek on Einstein's remark.</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/BG_MeteorStrike.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/BG_MeteorStrike.jpg') }}" class="img-fluid">
-                <p class="art-caption">"Meteor"</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/BG_Mystic.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/BG_Mystic.jpg') }}" class="img-fluid">
-                <p class="art-caption">"Mystic"</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/BG_Outsideitssnowing.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/BG_Outsideitssnowing.jpg') }}" class="img-fluid">
-                <p class="art-caption">"Outside it's Snowing" - One of my surgeon friends tries to save a woman's arm while it is snowing outside.</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/BG_PlacidSea.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/BG_PlacidSea.jpg') }}" class="img-fluid">
-                <p class="art-caption">"Placid Sea"</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/BG_Stickball.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/BG_Stickball.jpg') }}" class="img-fluid">
-                <p class="art-caption">"Stickball"</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/BG_TakeOff.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/BG_TakeOff.jpg') }}" class="img-fluid">
-                <p class="art-caption">"Take Off" - a sculpture inspired by Brancusi's "Bird in Flight"</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/Equinox.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/Equinox.jpg') }}" class="img-fluid">
-                <p class="art-caption">"Equinox" - Painting on my living room wall inspired by Stonehenge</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/Help skeletons small file.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/Help skeletons small file.jpg') }}" class="img-fluid">
-                <p class="art-caption">"Help"</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/Pyrmamids.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/Pyrmamids.jpg') }}" class="img-fluid">
-                <p class="art-caption">"Solitude"</p>
-            </a>
-        </div>
-        <div class="piece-of-art">
-            <a href="{{ asset('/assets/art/physical/BG_exclam.jpg')  }}">
-                <img src="{{ asset('/assets/art/physical/BG_exclam.jpg') }}" class="img-fluid">
-                <p class="art-caption">"!" - Man's brain can't handle the female figure</p>
-            </a>
+{% block body_indentation %}
+    <div class="inc-bg-black inc-nudge-l1">
+        <h1 class="inc-text-light">Art</h1>
+        <div class="d-flex flex-row flex-wrap">
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/art hands - touched up.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/art hands - touched up.jpg') }}" class="img-fluid">
+                    <p class="art-caption">A sculpted hand, painting a painted hand, which is drawing a drawn hand</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/BG_airbrushmeteorcropped.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/BG_airbrushmeteorcropped.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"Meteor"</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/BG_Arck.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/BG_Arck.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"Arck"</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/BG_GirlinaRedSkirt.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/BG_GirlinaRedSkirt.jpg') }}" class="img-fluid">
+                    <p class="art-caption"></p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/BG_Goddoesnotcastdice.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/BG_Goddoesnotcastdice.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"God does not cast dice with the Universe".- Based tongue in cheek on Einstein's remark.</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/BG_MeteorStrike.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/BG_MeteorStrike.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"Meteor"</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/BG_Mystic.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/BG_Mystic.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"Mystic"</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/BG_Outsideitssnowing.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/BG_Outsideitssnowing.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"Outside it's Snowing" - One of my surgeon friends tries to save a woman's arm while it is snowing outside.</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/BG_PlacidSea.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/BG_PlacidSea.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"Placid Sea"</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/BG_Stickball.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/BG_Stickball.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"Stickball"</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/BG_TakeOff.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/BG_TakeOff.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"Take Off" - a sculpture inspired by Brancusi's "Bird in Flight"</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/Equinox.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/Equinox.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"Equinox" - Painting on my living room wall inspired by Stonehenge</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/Help skeletons small file.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/Help skeletons small file.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"Help"</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/Pyrmamids.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/Pyrmamids.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"Solitude"</p>
+                </a>
+            </div>
+            <div class="piece-of-art">
+                <a href="{{ asset('/assets/art/physical/BG_exclam.jpg')  }}">
+                    <img src="{{ asset('/assets/art/physical/BG_exclam.jpg') }}" class="img-fluid">
+                    <p class="art-caption">"!" - Man's brain can't handle the female figure</p>
+                </a>
+            </div>
         </div>
     </div>
 {% endblock %}

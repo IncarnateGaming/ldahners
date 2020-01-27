@@ -596,8 +596,8 @@ html .inc-text-black {
   }
 }
 .incarnate-video {
-  width: 480px;
-  height: 360px;
+  width: 360px;
+  height: 270px;
 }
 
 @media (min-width: 768px) {
@@ -656,6 +656,13 @@ html body {
   flex: 1;
 }
 
+.inc-nudge-l1 {
+  left: -1rem;
+  width: calc(100% + 1rem);
+  position: relative;
+  padding-left: 1rem;
+}
+
 #incarnate-logo img {
   height: 60px;
 }
@@ -708,7 +715,7 @@ footer.page-footer {
     flex-direction: row;
   }
 }
-@media (orientation: landscape) and (min-width: 870px) {
+@media (min-width: 870px) and (orientation: landscape) {
   #incarnate-logo {
     display: block;
   }
@@ -739,11 +746,6 @@ footer.page-footer {
     padding-top: unset;
     padding-left: 0.1rem;
     padding-right: 0.1rem;
-  }
-}
-@media (min-width: 450px) {
-  #incarnate-logo {
-    display: block;
   }
 }
 /*!

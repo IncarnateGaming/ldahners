@@ -20,6 +20,14 @@ html body{
 .inc-flex-grow{
   flex: 1;
 }
+
+//Nudges
+.inc-nudge-l1{
+  left:-1rem;
+  width:calc(100% + 1rem);
+  position:relative;
+  padding-left:1rem;
+}
 //Header - Part 1
 
 #incarnate-logo img{
@@ -66,38 +74,35 @@ footer.page-footer{
   .inc-flex-orientation{
     flex-direction: row;
   }
-  @media (min-width: 870px) {
-    #incarnate-logo{
-      display:block;
-    }
-    .navbar-toggler{
-      display:none;
-    }
-    nav.inc-sticky-header{
-      width:14rem;
-      height:100vh;
-    }
-    nav.inc-sticky-header div.collapse{
-      display:block;
-    }
-    .inc-nav-body{
-      display:flex;
-    }
-    .inc-nav-flex-holder{
-      flex: 0 0 14rem;
-    }
-    .inc-body{
-      flex: 1;
-      padding-top:unset;
-      padding-left:0.1rem;
-      padding-right:0.1rem;
-    }
-  }
 }
-@media (min-width: 450px) {
+@media (min-width: 870px) and (orientation: landscape) {
   #incarnate-logo{
     display:block;
   }
+  .navbar-toggler{
+    display:none;
+  }
+  nav.inc-sticky-header{
+    width:14rem;
+    height:100vh;
+  }
+  nav.inc-sticky-header div.collapse{
+    display:block;
+  }
+  .inc-nav-body{
+    display:flex;
+  }
+  .inc-nav-flex-holder{
+    flex: 0 0 14rem;
+  }
+  .inc-body{
+    flex: 1;
+    padding-top:unset;
+    padding-left:0.1rem;
+    padding-right:0.1rem;
+  }
+}
+@media (min-width: 450px) {
 }
 @media (min-width: 576px) {
 }
