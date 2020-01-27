@@ -24,11 +24,6 @@ class NavFunctions{
         window.scrollTo(0,0);
     }
 }
-class IncarnateReference{
-    static incarnateDelay(ms){
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
-}
 window.addEventListener('scroll',NavFunctions.changeNavOnScroll);
 document.getElementById('topButton').addEventListener('click',NavFunctions.toTop);
 NavFunctions.hideTop();

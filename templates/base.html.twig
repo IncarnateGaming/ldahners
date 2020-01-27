@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="inc-top-html">
+<html id="inc-top-html" class="inc-top-html">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,10 +43,10 @@
             </div>
         </div>
         <nav class="navbar inc-sticky-header inc-banners align-content-start inc-bg-ldahners2-dark" id="navbar">
-            <a id="incarnate-logo" class="navbar-brand inc-text-light" href="/"><img src="{{ asset('/assets/art/physical/Help skeletons small file-tiny.jpg') }}" class="mr-1">Laury Dahners</a>
             <button class="navbar-toggler text-dark mr-auto inc-button-color inc-bg-ldahners7" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <a id="incarnate-logo" class="navbar-brand inc-text-light" href="/"><img src="{{ asset('/assets/art/physical/Help skeletons small file-tiny.jpg') }}" class="mr-1">Laury Dahners<img src="{{ asset('/assets/images/Quicker1_tiny.jpg') }}" class="ml-1 mr-1"></a>
             <div class="collapse navbar-collapse overflow-auto" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -89,6 +89,7 @@
                 var IncarnateAnalyticsTag = 'UA-155417623-1';
             </script>
             <script src="{{asset('packs/js/navFunctions.js')}}"></script>
+            <script src="{{asset('packs/js/incarnateReference.js')}}"></script>
             <script src="{{ asset('packs/js/orientation.js') }}"></script>
             <script src="{{ asset('packs/js/analytics.js') }}"></script>
             <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

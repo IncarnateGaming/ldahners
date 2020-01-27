@@ -40,12 +40,13 @@ nav.inc-sticky-header{
   overflow-y:scroll;
   overflow-x:hidden;
   -ms-overflow-style: none;
+  padding: 0.5rem;
 }
 nav.inc-sticky-header::-webkit-scrollbar {
   display: none;
 }
 .inc-body{
-  padding-top:5.4rem;
+  padding-top:3.4rem;
 }
 #incarnate-logo{
   display:none;
@@ -75,9 +76,19 @@ footer.page-footer{
     flex-direction: row;
   }
 }
-@media (min-width: 870px) and (orientation: landscape) {
+@media (min-width: 450px){
   #incarnate-logo{
     display:block;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .inc-body{
+    padding-top:5.4rem;
+  }
+}
+@media (min-width: 870px) and (orientation: landscape) {
+  #incarnate-logo{
+    margin:unset;
   }
   .navbar-toggler{
     display:none;
