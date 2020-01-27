@@ -12,7 +12,7 @@ class ProfessionalController extends AbstractController
      */
     public function professionalPage()
     {
-        return $this->render('professional/index.html.twig', [
+        return $this->render('professional/professional.html.twig', [
             'controller_name' => 'ProfessionalController',
         ]);
     }
