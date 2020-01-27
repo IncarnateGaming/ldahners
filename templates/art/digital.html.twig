@@ -1,20 +1,28 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ArtController!{% endblock %}
+{% block title %}Digital Art{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'D:/IncarnateGaming/Fiverr/gigs/symfony/ldahners/src/Controller/ArtController.php'|file_link(0) }}">src/Controller/ArtController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'D:/IncarnateGaming/Fiverr/gigs/symfony/ldahners/templates/art/physical.html.twig'|file_link(0) }}">templates/art/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <h1>Digital Art</h1>
+    <div class="d-flex flex-row flex-wrap">
+        <img src="{{ asset('/assets/art/digital/blue ringed planet and tapering tower 36x11.75 horiz.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/cexplosion.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/Cranes, color boost, palette knifre.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/Fall leaves foggy morning hueboost palette knife then daubs.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/Fishermen paint daubs color boost.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/Four planets,blue white nebula,stars, mountains family -  36x11.75poster horix.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/Four planets,blue white nebula,stars.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/Four planets,red white nebula,stars, mountains family -  36x11.75 poster vert.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/Grand Canyon.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/Landscape with obelisks and ringed planet.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/Myrtle Beach Morning stamp.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/Nevada Highway with snow modified 2.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/One planet three moons, four stars.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/pyramids with man observing.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/red planet on starfield over lake royale lower quality.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/ringed planet over ocean  36x11.75 horiz.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/ringed planet over ocean  36x11.75 vertical.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/ringed planet over ocean Red and Green version 36x11.75 vertical.jpg') }}" class="img-fluid">
+        <img src="{{ asset('/assets/art/digital/Stonehenge with white nebula lq.jpg') }}" class="img-fluid">
+    </div>
 {% endblock %}

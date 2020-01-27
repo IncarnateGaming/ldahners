@@ -1,0 +1,40 @@
+.incarnate-video{
+  width:480px;
+  height:360px;
+}
+@media (min-width: 768px) {
+  .incarnate-video{
+    width:360px;
+    height:270px;
+  }
+}
+@media (min-width: 870px) {
+  .incarnate-video{
+    width:280px;
+    height:210px;
+  }
+}
+@media (min-width: 1000px) {
+  .incarnate-video{
+    width:360px;
+    height:270px;
+  }
+}
+@media (min-width: 1200px) {
+  .incarnate-video{
+    width:440px;
+    height:330px;
+  }
+}
+@media (min-width: 1500px) {
+  .incarnate-video{
+    width:560px;
+    height:420px;
+  }
+}
+@media (min-width: 2000px) {
+  .incarnate-video{
+    width:720px;
+    height:540px;
+  }
+}
