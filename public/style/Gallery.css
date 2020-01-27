@@ -1,0 +1,17 @@
+.piece-of-art {
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.piece-of-art img {
+  max-width: 15rem;
+  max-height: 15rem;
+}
+
+.art-caption {
+  max-width: 15rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=Gallery.css.map */
