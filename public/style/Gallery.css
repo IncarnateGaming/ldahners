@@ -6,6 +6,7 @@
 .piece-of-art img {
   max-width: 15rem;
   max-height: 15rem;
+  cursor: pointer;
 }
 
 .art-caption {

@@ -14,6 +14,7 @@
   --ldahners6-dark: #3e5c63;
   --ldahners7:#FFE0A1;
   --ldahners7-dark: #726549;
+  --inc-8: #0092b3;
 }
 $theme-colors: (
         "primary":#00D0FF,
@@ -63,6 +64,7 @@ html .inc-bg-ldahners6{background-color:#A1ECFF;}
 html .inc-bg-ldahners6-dark{background-color:#3e5c63;}
 html .inc-bg-ldahners7{background-color:#FFE0A1;}
 html .inc-bg-ldahners7-dark{background-color:#726549;}
+html .inc-bg-8{background-color: #0092b3;}
 html .inc-bg-black{background-color:black;}
 html .inc-bg-white{background-color:white;}
 
@@ -80,5 +82,6 @@ html .inc-text-ldahners6{color:#A1ECFF;}
 html .inc-text-ldahners6-dark{color:#3e5c63;}
 html .inc-text-ldahners7{color:#FFE0A1;}
 html .inc-text-ldahners7-dark{color:#726549;}
+html .inc-bg-8{color: #0092b3;}
 html .inc-text-black{color:black;}
 html .inc-text-black{color:white;}

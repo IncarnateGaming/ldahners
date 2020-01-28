@@ -5,8 +5,8 @@
 {{ parent() }}
     <link rel="stylesheet" href="{{ asset('/style/Gallery.css') }}">
 {% endblock %}
-{% block body_indentation %}
-    <div class="inc-bg-black inc-nudge-l1">
+{% block body %}
+{#    <div class="inc-bg-black inc-nudge-l1">#}
         <h1 class="inc-text-light">Digital Art</h1>
         <div class="d-flex flex-row flex-wrap artwork">
             <div class="piece-of-art" data-count="0">
@@ -86,7 +86,7 @@
                 <p class="art-caption"></p>
             </div>
         </div>
-    </div>
+{#    </div>#}
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}

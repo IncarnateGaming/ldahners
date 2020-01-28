@@ -14,6 +14,7 @@
   --ldahners6-dark: #3e5c63;
   --ldahners7:#FFE0A1;
   --ldahners7-dark: #726549;
+  --inc-8: #0092b3;
 }
 
 .inc-bg-primary {
@@ -104,6 +105,10 @@ html .inc-bg-ldahners7-dark {
   background-color: #726549;
 }
 
+html .inc-bg-8 {
+  background-color: #0092b3;
+}
+
 html .inc-bg-black {
   background-color: black;
 }
@@ -166,6 +171,10 @@ html .inc-text-ldahners7 {
 
 html .inc-text-ldahners7-dark {
   color: #726549;
+}
+
+html .inc-bg-8 {
+  color: #0092b3;
 }
 
 html .inc-text-black {
@@ -191,6 +200,7 @@ html .inc-text-black {
   --ldahners6-dark: #3e5c63;
   --ldahners7:#FFE0A1;
   --ldahners7-dark: #726549;
+  --inc-8: #0092b3;
 }
 
 .inc-bg-primary {
@@ -281,6 +291,10 @@ html .inc-bg-ldahners7-dark {
   background-color: #726549;
 }
 
+html .inc-bg-8 {
+  background-color: #0092b3;
+}
+
 html .inc-bg-black {
   background-color: black;
 }
@@ -343,6 +357,10 @@ html .inc-text-ldahners7 {
 
 html .inc-text-ldahners7-dark {
   color: #726549;
+}
+
+html .inc-bg-8 {
+  color: #0092b3;
 }
 
 html .inc-text-black {
@@ -374,6 +392,7 @@ html .inc-text-black {
   --ldahners6-dark: #3e5c63;
   --ldahners7:#FFE0A1;
   --ldahners7-dark: #726549;
+  --inc-8: #0092b3;
 }
 
 .inc-bg-primary {
@@ -464,6 +483,10 @@ html .inc-bg-ldahners7-dark {
   background-color: #726549;
 }
 
+html .inc-bg-8 {
+  background-color: #0092b3;
+}
+
 html .inc-bg-black {
   background-color: black;
 }
@@ -526,6 +549,10 @@ html .inc-text-ldahners7 {
 
 html .inc-text-ldahners7-dark {
   color: #726549;
+}
+
+html .inc-bg-8 {
+  color: #0092b3;
 }
 
 html .inc-text-black {
@@ -756,8 +783,6 @@ footer.page-footer {
   .inc-body {
     flex: 1;
     padding-top: unset;
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
   }
 }
 /*!
@@ -8996,7 +9021,7 @@ h3 {
   }
 }
 a {
-  color: var(--ldahners2-dark);
+  color: var(--inc-8);
 }
 
 .navbar-toggler-icon {

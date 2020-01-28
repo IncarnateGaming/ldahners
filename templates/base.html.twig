@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="shortcut icon" href="{{asset('/assets/art/physical/Help skeletons small file-tiny.jpg')}}" type="image/x-icon">
+        <link rel="shortcut icon" href="{{asset('/assets/images/0-simple-help-tiny.jpg')}}" type="image/x-icon">
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('/style/ldahnersMain.css') }}">
         {% endblock %}
@@ -22,7 +22,7 @@
         <![endif]-->
     </head>
     <body class="d-flex flex-column">
-        <div class="inc-nav-body inc-text-ldahners6-dark inc-bg-ldahners5">
+        <div class="inc-nav-body inc-text-ldahners4 inc-bg-ldahners2-dark">
             <div class="inc-nav-flex-holder"></div>
             <div class="inc-body inc-flex-grow">
                 {% for message in app.flashes('success') %}
@@ -35,18 +35,18 @@
                         {% block body %}{% endblock %}
                     </div>
                 {% endblock %}
-                <footer class="page-footer font-small inc-banners inc-bg-ldahners2-dark">
+                <footer class="page-footer font-small inc-banners inc-bg-ldahners4-dark">
                     <div class="footer-copyright text-center py-3 inc-text-light">
                         © 2020 <a class="inc-text-light" href="https://www.incarnategamingllc.com/hire/">Incarnate Gaming LLC</a>
                     </div>
                 </footer>
             </div>
         </div>
-        <nav class="navbar inc-sticky-header inc-banners align-content-start inc-bg-ldahners2-dark" id="navbar">
+        <nav class="navbar inc-sticky-header inc-banners align-content-start inc-bg-ldahners4-dark" id="navbar">
             <button class="navbar-toggler text-dark mr-auto inc-button-color inc-bg-ldahners7" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a id="incarnate-logo" class="navbar-brand inc-text-light" href="/"><img src="{{ asset('/assets/art/physical/Help skeletons small file-tiny.jpg') }}" class="mr-1">Laury Dahners<img src="{{ asset('/assets/images/Quicker1_tiny.jpg') }}" class="ml-1 mr-1"></a>
+            <a id="incarnate-logo" class="navbar-brand inc-text-light" href="/"><img src="{{ asset('/assets/images/0-simple-help-tiny.jpg') }}" class="mr-1">Laury Dahners<img src="{{ asset('/assets/images/0-simple-donsaii-tiny.jpg') }}" class="ml-1 mr-1"></a>
             <div class="collapse navbar-collapse overflow-auto" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
