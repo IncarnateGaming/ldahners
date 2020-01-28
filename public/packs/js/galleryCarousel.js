@@ -14,13 +14,13 @@ class IncarnateGalleryCarousel{
     buildCarousel(items){
         const carousel = document.createElement('div');
         carousel.setAttribute('id',this.name);
-        carousel.setAttribute('class','carousel slide carousel-fade');
+        carousel.setAttribute('class','carousel slide carousel-fade d-flex');
         carousel.setAttribute('data-ride','carousel');
         carousel.setAttribute('data-interval','13000');
         const ol = document.createElement('ol');
         ol.setAttribute('class','carousel-indicators');
         const carouselInner = document.createElement('div');
-        carouselInner.setAttribute('class','carousel-inner');
+        carouselInner.setAttribute('class','carousel-inner d-flex');
         const itemLength = this.items.length;
         for (var a=0; a<itemLength; a++){
             ol.innerHTML += `<li data-target="#${this.name}" data-slide-to="${a}"></li>`;

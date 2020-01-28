@@ -28,6 +28,13 @@ body .carousel{
   background-color: black;
 }
 html .carousel{
+  .carousel-inner{
+    align-items:center;
+    justify-content: center;
+  }
+  .carousel-item{
+    width:unset;
+  }
   .piece-of-art{
     padding:unset;
     margin:unset;
@@ -36,11 +43,11 @@ html .carousel{
     max-width: 100vw;
     max-height: 100vh;
     //margin:auto;
-    left:50vw;
+    //left:50vw;
     //bottom:50vh;
     //top:50vh;
-    position:relative;
-    transform:translate(-50%,0);
+    //position:relative;
+    //transform:translate(-50%,0);
   }
   .art-caption{
     max-width: unset;
