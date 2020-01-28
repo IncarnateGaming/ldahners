@@ -26,8 +26,9 @@ class IncarnateGalleryCarousel{
             ol.innerHTML += `<li data-target="#${this.name}" data-slide-to="${a}"></li>`;
             carouselInner.innerHTML +=
                 `<div class="carousel-item item" data-count="${this.items[a].getAttribute('data-count')}">
-                    <a href="${this.items[a].getElementsByTagName('img')[0].getAttribute('src')}">
-                        <img class="d-block my-auto" src="${this.items[a].getElementsByTagName('img')[0].getAttribute('src')}">
+                    <a href="${this.items[a].getElementsByTagName('img')[0].getAttribute('src')}" class="d-flex flex-column">
+<!--                        <img class="d-block my-auto" src="${this.items[a].getElementsByTagName('img')[0].getAttribute('src')}">-->
+                        ${this.items[a].innerHTML}
                     </a>
                 </div>`;
         }
@@ -42,7 +43,7 @@ class IncarnateGalleryCarousel{
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
               </a>`;
-        carousel.innerHTML += `<button class="close-carousel inc-text-light inc-bg-black mx-auto d-block">Close</button>`;
+        carousel.innerHTML += `<button class="close-carousel inc-text-light inc-bg-black">Close</button>`;
         return carousel;
     }
     static deploy(ev,carousel,itemClass){

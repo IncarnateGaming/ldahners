@@ -16,10 +16,10 @@
 }
 
 .close-carousel {
-  position: fixed;
+  left: 0;
   top: 0;
-  left: 50%;
-  transform: translate(-50%);
+  position: fixed;
+  display: block;
 }
 
 body .carousel {
@@ -48,6 +48,7 @@ html .carousel img {
 }
 html .carousel .art-caption {
   max-width: unset;
+  margin-bottom: 6rem;
 }
 
 html.carousel-active .inc-nav-body {
