@@ -7,6 +7,7 @@
         <h1>Songs</h1>
         <p>These are all songs that I have written, many of them made much better by the help of people who record with me (my thanks to Peter Barkley, Emmanuel Kembe, Joel Keel, Mickey Mills, Robert Martin, Andy Stavas, Bernard Stokes). They have offered suggestions and added performances which have greatly improved the final versions.</p>
     </div>
+    <button class="btn inc-bg-ldahners7 inc-button-color mx-auto inc-autoplay-toggle d-block">Turn Autoplay Off</button>
     <div class="row">
         <div class="col-md-6 inc-bg-ldahners3-dark px-4 inc-left-pane">
             <h2>Audio Files</h2>
@@ -216,6 +217,7 @@
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}
+    <script src="{{ asset('packs/js/autoPlay.js') }}"></script>
     <script>
         IncarnateColorTryer.build('inc-left-pane','background-color','Left Pane Background');
         IncarnateColorTryer.build('inc-right-pane','background-color','Right Pane Background');
