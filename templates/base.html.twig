@@ -46,7 +46,7 @@
             <button class="navbar-toggler text-dark mr-auto inc-button-color inc-bg-ldahners7" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a id="incarnate-logo" class="navbar-brand inc-text-light" href="/"><img src="{{ asset('/assets/images/0-simple-help-tiny.jpg') }}" class="mr-1">Laury Dahners<img src="{{ asset('/assets/images/0-simple-donsaii-tiny.jpg') }}" class="ml-1 mr-1"></a>
+            <a id="incarnate-logo" class="navbar-brand inc-text-light ml-2" href="/">Laury Dahners<img src="{{ asset('/assets/images/0-simple-donsaii-tiny.jpg') }}" class="ml-1 mr-1"></a>
             <div class="collapse navbar-collapse overflow-auto" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -83,6 +83,7 @@
                     {% block backButton %}{% endblock %}
                 </ul>
             </div>
+            <img src="{{ asset('/assets/images/0-simple-help-tiny.jpg') }}" class="mr-1 inc-closing-logo">
         </nav>
         {% block javascripts %}
             <script>

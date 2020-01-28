@@ -33,6 +33,9 @@ html body{
 #incarnate-logo img{
   height:60px
 }
+.inc-closing-logo{
+  display:none;
+}
 nav.inc-sticky-header{
   position:fixed;
   top:0;
@@ -89,6 +92,9 @@ footer.page-footer{
 @media (min-width: 870px) and (orientation: landscape) {
   #incarnate-logo{
     margin:unset;
+  }
+  .inc-closing-logo{
+    display:block;
   }
   .navbar-toggler{
     display:none;
