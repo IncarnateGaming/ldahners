@@ -14,8 +14,9 @@ class IncarnateGalleryCarousel{
     buildCarousel(items){
         const carousel = document.createElement('div');
         carousel.setAttribute('id',this.name);
-        carousel.setAttribute('class','carousel slide');
+        carousel.setAttribute('class','carousel slide carousel-fade');
         carousel.setAttribute('data-ride','carousel');
+        carousel.setAttribute('data-interval','13000');
         const ol = document.createElement('ol');
         ol.setAttribute('class','carousel-indicators');
         const carouselInner = document.createElement('div');
@@ -24,9 +25,9 @@ class IncarnateGalleryCarousel{
         for (var a=0; a<itemLength; a++){
             ol.innerHTML += `<li data-target="#${this.name}" data-slide-to="${a}"></li>`;
             carouselInner.innerHTML +=
-                `<div class="carousel-item" data-count="${this.items[a].getAttribute('data-count')}">
+                `<div class="carousel-item item" data-count="${this.items[a].getAttribute('data-count')}">
                     <a href="${this.items[a].getElementsByTagName('img')[0].getAttribute('src')}">
-                        ${this.items[a].outerHTML}
+                        <img class="d-block my-auto" src="${this.items[a].getElementsByTagName('img')[0].getAttribute('src')}">
                     </a>
                 </div>`;
         }
@@ -58,9 +59,11 @@ class IncarnateGalleryCarousel{
         }
         const closeButton = newCarousel.getElementsByClassName('close-carousel')[0].addEventListener('click',IncarnateGalleryCarousel.closeCarousel);
         document.getElementsByTagName('body')[0].append(newCarousel);
+        document.getElementsByTagName('html')[0].classList.add('carousel-active');
     }
     static closeCarousel(ev){
         const carousel = IncarnateReference.getClosestClass(ev.target,'carousel');
         carousel.remove();
+        document.getElementsByTagName('html')[0].classList.remove('carousel-active');
     }
 }
