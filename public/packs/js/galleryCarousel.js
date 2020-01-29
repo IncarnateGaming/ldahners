@@ -42,6 +42,7 @@ class IncarnateGalleryCarousel{
         return carousel;
     }
     static deploy(ev,carousel,itemClass){
+        IncarnateGalleryCarousel.currentY = window.scrollY;
         const item = IncarnateReference.getClosestClass(ev.target,itemClass);
         const dataCount = item.getAttribute('data-count');
         const newCarousel = carousel.cloneNode(true);
@@ -62,5 +63,7 @@ class IncarnateGalleryCarousel{
         const carousel = IncarnateReference.getClosestClass(ev.target,'carousel');
         carousel.remove();
         document.getElementsByTagName('html')[0].classList.remove('carousel-active');
+        window.scroll(0,IncarnateGalleryCarousel.currentY);
     }
 }
+IncarnateGalleryCarousel.currentY = 0;

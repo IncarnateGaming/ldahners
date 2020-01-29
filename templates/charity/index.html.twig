@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="{{ asset('/style/Gallery.css') }}">
 {% endblock %}
 {% block body %}
-    <h1>Charity Surgery</h1>
-    <div class="top-section row">
-        <div class="col-md-4 artwork">
+    <h1 class="mx-1">Charity Surgery</h1>
+    <div class="top-section row mx-1">
+        <div class="inc-col-md-4 artwork">
             <div class="piece-of-art" data-count="0">
-                <img src="{{ asset('/assets/images/charity/Soma, Mac operating edited bkgrnd out.jpg') }}" class="img-fluid mx-auto">
+                <img src="{{ asset('/assets/images/charity/Soma, Mac operating edited bkgrnd out.jpg') }}" class="d-block img-fluid mx-auto">
                 <p class="art-caption">Soma and Mac operating</p>
             </div>
             <div class="piece-of-art" data-count="1">
-                <img src="{{ asset('/assets/images/charity/Sunset from doghouse.jpg') }}" class="img-fluid mx-auto">
+                <img src="{{ asset('/assets/images/charity/Sunset from doghouse.jpg') }}" class="d-block img-fluid mx-auto">
                 <p class="art-caption">Sunset from Doghouse</p>
             </div>
             <div>
@@ -41,25 +41,215 @@
                 <p><a href="{{ asset('assets/documents/tarhawkReports/pdf/TarHawks Letter head .pdf') }}">TarHawks Letter head</a></p>
             </div>
         </div>
-        <div class="col-md-4 artwork">
+        <div class="inc-col-md-4 artwork">
             <p>This page is about the mission trips of the "TarHawks," (UNC & Kansas) a group of Orthopedic Surgeons, Orthopedic Residents, Anesthesiologists, Anesthetists, Nurses, Surgical Technicians and other volunteers who have made a number of trips to Jinotega, Nicaragua to perform charity surgeries originally under the auspices of <a href="http://projecthealthforleon.org/">Project Health for Leon</a> and then starting in August 2010 under the auspices of the <a href="http://www.dd-clinic.com/ddfoundation.shtml">Dickson-Diveley Orthopaedic Foundation</a>.</p>
             <div class="piece-of-art" data-count="2">
-                <img src="{{ asset('/assets/images/charity/TarHawk.jpg') }}" class="img-fluid mx-auto">
+                <img src="{{ asset('/assets/images/charity/TarHawk.jpg') }}" class="d-block img-fluid mx-auto">
             </div>
             <div class="piece-of-art" data-count="3">
-                <img src="{{ asset('/assets/images/charity/composite of all Jinotega.jpg') }}" class="img-fluid mx-auto">
+                <img src="{{ asset('/assets/images/charity/composite of all Jinotega.jpg') }}" class="d-block img-fluid mx-auto">
                 <p class="art-caption">Jinotega Nicargua</p>
             </div>
             <div class="piece-of-art" data-count="4">
-                <img src="{{ asset('/assets/images/charity/Jan, Mac, Laury, Carrol in scrubs.jpg') }}" class="img-fluid mx-auto">
+                <img src="{{ asset('/assets/images/charity/Jan, Mac, Laury, Carrol in scrubs.jpg') }}" class="d-block img-fluid mx-auto">
                 <p class="art-caption">Jan Leo, Gerry McNamara, Laury Dahners and Carroll Jones on the first trip to Jinotega in January 2003</p>
             </div>
             <div class="piece-of-art" data-count="5">
-                <img src="{{ asset('/assets/images/charity/countryside.jpg') }}" class="img-fluid mx-auto">
+                <img src="{{ asset('/assets/images/charity/countryside.jpg') }}" class="d-block img-fluid mx-auto">
                 <p class="art-caption">The local countryside</p>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="inc-col-md-4 artwork">
+            <div class="piece-of-art" data-count="6">
+                <img src="{{ asset('/assets/images/charity/Dinner at Hotel Cafe3.jpg') }}" class="d-block img-fluid mx-auto">
+                <p class="art-caption">Dinner at Hotel Cafe with the gang</p>
+            </div>
+            <div class="audio-container">
+                <p><strong><a href="{{ asset('/assets/music/songs/mp3/Un Esfuerzo Mas END.mp3') }}">Un Esfuerzo Mas</a></strong> - Un Esfuezo Mas is a song about these missions. Written by our host in Jinotega, Felix Manuel Balladeres Zamora (first on the left in the picture above). It was translated and sung by Elene Dahners.</p>
+                <audio controls><source src="{{ asset('/assets/music/songs/mp3/Un Esfuerzo Mas END.mp3') }}" type="audio/mp3">Your browser does not support the audio tag</audio>
+            </div>
+            <div class="video-container">
+                <p><strong><a href="{{ asset('/assets/videos/charity/Jinotega 512kbps.mp4') }}">Jinotega</a></strong> - is a video from our first trip there.</p>
+                <video class="incarnate-video-3" controls>
+                    <source src="{{ asset('/assets/videos/charity/Jinotega 512kbps.mp4') }}" type="video/mp4">
+                    Your Browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-container">
+                <p><strong><a href="{{ asset('/assets/videos/charity/Nic trip 06.mp4') }}">Nic '06</a></strong> - is from the trip in January of '06.</p>
+                <video class="incarnate-video-3" controls>
+                    <source src="{{ asset('/assets/videos/charity/Nic trip 06.mp4') }}" type="video/mp4">
+                    Your Browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-container">
+                <p><strong><a href="{{ asset('/assets/music/songs/mp4/Smile 512 kbps.mp4') }}">Smile</a></strong> - is a music video about the charity surgery group <a href="https://www.operationsmile.org/">Operation Smile</a> with whom I made two trips.</p>
+                <video class="incarnate-video-3" controls>
+                    <source src="{{ asset('/assets/music/songs/mp4/Smile 512 kbps.mp4') }}" type="video/mp4">
+                    Your Browser does not support the video tag.
+                </video>
+            </div>
+            <div class="piece-of-art" data-count="7">
+                <img src="{{ asset('/assets/images/charity/DavidMcDanielTKR.jpg') }}" class="d-block img-fluid mx-auto">
+                <p class="art-caption">David McDaniel, John Barrington and Dan Murphy peforming a Total Knee Replacement</p>
+            </div>
+            <div class="piece-of-art" data-count="8">
+                <img src="{{ asset('/assets/images/charity/three girls.jpg') }}" class="d-block img-fluid mx-auto">
+                <p class="art-caption">Three of our patients</p>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row flex-wrap artwork">
+        <div class="piece-of-art" data-count="9">
+            <img src="{{ asset('/assets/images/charity/congenital clubfoot, reversed feet.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">A boy with such severe clubfeet that he wore his shoes backwards.</p>
+        </div>
+        <div class="piece-of-art" data-count="10">
+            <img src="{{ asset('/assets/images/charity/congenital clubfoot, reversed feet preop.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">The knee is pointing up in this photo. It was taken in the OR prior to attempting to repair this severe clubfoot.</p>
+        </div>
+        <div class="piece-of-art" data-count="11">
+            <img src="{{ asset('/assets/images/charity/congenital clubfoot, reversed feet postop in cast medial.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">At the end of the procedure (there was a lot of sweatin' and cussin' involved in doing this as it was one of the hardest surgeries I've been in on), the foot is facing frontward in the cast.</p>
+        </div>
+        <div class="piece-of-art" data-count="12">
+            <img src="{{ asset('/assets/images/charity/boy001.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">At our next trip a year later, one foot is facing forward and the other still backwards, he is anxiously awating repair of the second foot</p>
+        </div>
+        <div class="piece-of-art" data-count="13">
+            <img src="{{ asset('/assets/images/charity/final bare feet.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Final view of feet in 2006</p>
+        </div>
+        <div class="piece-of-art" data-count="14">
+            <img src="{{ asset('/assets/images/charity/boy001_final.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Happy Kid</p>
+        </div>
+        <div class="piece-of-art" data-count="15">
+            <img src="{{ asset('/assets/images/charity/Krukenberg pre op.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Preop photo of a woman whose husband cut off both of her hands with a machete. Prosthetic hands are a poor option in 3rd world countries.</p>
+        </div>
+        <div class="piece-of-art" data-count="16">
+            <img src="{{ asset('/assets/images/charity/Krukenberg post op.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Dr. Jan Leo performed Krukenberg's operation to separate the radius and ulna providing the patient with a "grasping claw."</p>
+        </div>
+        <div class="piece-of-art" data-count="17">
+            <img src="{{ asset('/assets/images/charity/Krukenber late post op.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">A year later she is using the "claw" to feed herself without a prosthesis.</p>
+        </div>
+        <div class="piece-of-art" data-count="18">
+            <img src="{{ asset('/assets/images/charity/John Vicki Jenny.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">John Lohnes, Vicki Moore, Jenny Hooker doing a caudal block</p>
+        </div>
+        <div class="piece-of-art" data-count="19">
+            <img src="{{ asset('/assets/images/charity/adult clubfoot front.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">This 26 year old woman had walked on the side of her clubbed foot for her entire life.</p>
+        </div>
+        <div class="piece-of-art" data-count="20">
+            <img src="{{ asset('/assets/images/charity/adult clubfoot medial intraop post correction.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">At the end of the procedure her foot is back on straight.</p>
+        </div>
+        <div class="piece-of-art" data-count="21">
+            <img src="{{ asset('/assets/images/charity/c Follow up 2003 clubfoot 26 yo F medial view.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">A year later she came back to show us how happy she was to walk on the bottom of her foot.</p>
+        </div>
+        <div class="piece-of-art" data-count="22">
+            <img src="{{ asset('/assets/images/charity/Group on tank 06.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">2006 group on wrecked tank from war</p>
+        </div>
+        <div class="piece-of-art" data-count="23">
+            <img src="{{ asset('/assets/images/charity/Nicaragua 054.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">March 2005 dinner</p>
+        </div>
+        <div class="piece-of-art" data-count="24">
+            <img src="{{ asset('/assets/images/charity/group 1.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">2004 group</p>
+        </div>
+        <div class="piece-of-art" data-count="25">
+            <img src="{{ asset('/assets/images/charity/Mac.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Mac</p>
+        </div>
+        <div class="piece-of-art" data-count="26">
+            <img src="{{ asset('/assets/images/charity/Boy in wheelchair.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Boy in wheelchair</p>
+        </div>
+        <div class="piece-of-art" data-count="27">
+            <img src="{{ asset('/assets/images/charity/Carroll and Felix operating.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Carroll and Felix Gonzales operating on a boy's leg</p>
+        </div>
+        <div class="piece-of-art" data-count="28">
+            <img src="{{ asset('/assets/images/charity/Gang at dinner.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Aug '06 gang at dinner</p>
+        </div>
+        <div class="piece-of-art" data-count="29">
+            <img src="{{ asset('/assets/images/charity/Lunch at Pollo Frit 07.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Aug '07 Lunch at Pollo Frit</p>
+        </div>
+        <div class="piece-of-art" data-count="30">
+            <img src="{{ asset("/assets/images/charity/Surgeon's hands.jpg") }}" class="d-block img-fluid mx-auto">
+        </div>
+        <div class="piece-of-art" data-count="31">
+            <img src="{{ asset('/assets/images/charity/Jan and Felix operate.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Jan and Felix Balladeres work on tendons</p>
+        </div>
+        <div class="piece-of-art" data-count="32">
+            <img src="{{ asset("/assets/images/charity/Waitin' to be seen.jpg") }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Patients and families waiting to be seen in clinic</p>
+        </div>
+        <div class="piece-of-art" data-count="33">
+            <img src="{{ asset('/assets/images/charity/Tarhawk cast.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">TarHawk cast (partly light blue, partly red)</p>
+        </div>
+        <div class="piece-of-art" data-count="34">
+            <img src="{{ asset('/assets/images/charity/TKR painted.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption"></p>
+        </div>
+        <div class="piece-of-art" data-count="35">
+            <img src="{{ asset('/assets/images/charity/Felicia and cross saturated.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Felicia Sumpter at the cross on the mountain west of Jinotega.</p>
+        </div>
+        <div class="piece-of-art" data-count="36">
+            <img src="{{ asset('/assets/images/charity/Riding out to the Finca.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Riding out to the finca Aug 2009</p>
+        </div>
+        <div class="piece-of-art" data-count="37">
+            <img src="{{ asset('/assets/images/charity/open sc humerus.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Now that's a bad supracondylar humerus fracture</p>
+        </div>
+        <div class="piece-of-art" data-count="38">
+            <img src="{{ asset('/assets/images/charity/Open sc hum post op.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Supracondylar humerus fracture post op</p>
+        </div>
+        <div class="piece-of-art" data-count="39">
+            <img src="{{ asset('/assets/images/charity/murphy and kauk.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Murphy, Kauk and Jose (Cuervo)</p>
+        </div>
+        <div class="piece-of-art" data-count="40">
+            <img src="{{ asset('/assets/images/charity/Bob Esther, James Meeker operating.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">James Meeker, Bob Esther, Felix Balladeres excising tumor, leg</p>
+        </div>
+        <div class="piece-of-art" data-count="41">
+            <img src="{{ asset('/assets/images/charity/Morelia Cruz letter.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">A letter of thanks from 15 year old Morelia Cruz</p>
+        </div>
+        <div class="piece-of-art" data-count="42">
+            <img src="{{ asset('/assets/images/charity/three fingered hand.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Three fingered hand (congenital)</p>
+        </div>
+        <div class="piece-of-art" data-count="43">
+            <img src="{{ asset('/assets/images/charity/Tibia lost ot osteo.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">A two year old girl whose tibia was destroyed by osteomyelitis</p>
+        </div>
+        <div class="piece-of-art" data-count="44">
+            <img src="{{ asset('/assets/images/charity/Tibia lost to osteo XR.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">X-ray of her leg showing the loss of the tibia</p>
+        </div>
+        <div class="piece-of-art" data-count="45">
+            <img src="{{ asset('/assets/images/charity/tibia lost to osteo reconstructed.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Reconstruction of the leg by moving the fibula over to replace the tibia (tibia pro fibula)</p>
+        </div>
+        <div class="piece-of-art" data-count="46">
+            <img src="{{ asset('/assets/images/charity/Tibia osteo girl followup photo cropped.jpg') }}" class="d-block img-fluid mx-auto">
+            <p class="art-caption">Followup 8 months later</p>
         </div>
     </div>
 {% endblock %}
@@ -67,11 +257,11 @@
     {{ parent() }}
     <script src="{{asset('packs/js/galleryCarousel.js')}}"></script>
     <script>
-        const Carousel = new IncarnateGalleryCarousel('artwork','piece-of-art');
+        const incarnateGalleryCarousel = new IncarnateGalleryCarousel('artwork','piece-of-art');
         function carouselDeploy(ev){
-            IncarnateGalleryCarousel.deploy(ev,Carousel.carousel,'piece-of-art');
+            IncarnateGalleryCarousel.deploy(ev,incarnateGalleryCarousel.carousel,'piece-of-art');
         }
-        Carousel.items.forEach(element=>{
+        incarnateGalleryCarousel.items.forEach(element=>{
             element.addEventListener('click',carouselDeploy);
         });
     </script>
