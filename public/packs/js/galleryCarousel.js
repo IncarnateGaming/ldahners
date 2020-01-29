@@ -1,6 +1,8 @@
 class IncarnateGalleryCarousel{
     constructor(parentClass, itemClass) {
         this.name = parentClass + 'Carousel';
+        this.parentClass = parentClass;
+        this.itemClass = itemClass;
         const parents = document.getElementsByClassName(parentClass);
         var items = [];
         [].forEach.call(parents, parent=>{
@@ -9,7 +11,6 @@ class IncarnateGalleryCarousel{
         });
         this.items = items;
         this.carousel = this.buildCarousel(items);
-        console.log(this.carousel);
     }
     buildCarousel(items){
         const carousel = document.createElement('div');
@@ -41,11 +42,18 @@ class IncarnateGalleryCarousel{
         carousel.innerHTML += `<button class="close-carousel inc-text-light inc-bg-black">Close</button>`;
         return carousel;
     }
-    static deploy(ev,carousel,itemClass){
+
+    /**
+     * @param ev - the click event
+     * @param carousel - the carousel built with the construct function
+     * @param interval
+     */
+    static deploy(ev,incarnateGalleryCarousel,interval){
+        interval = interval || 13000;
         IncarnateGalleryCarousel.currentY = window.scrollY;
-        const item = IncarnateReference.getClosestClass(ev.target,itemClass);
+        const item = IncarnateReference.getClosestClass(ev.target,incarnateGalleryCarousel.itemClass);
         const dataCount = item.getAttribute('data-count');
-        const newCarousel = carousel.cloneNode(true);
+        const newCarousel = incarnateGalleryCarousel.carousel.cloneNode(true);
         const items = newCarousel.getElementsByClassName('carousel-item');
         const itemLength = items.length;
         for (var a=0;a<itemLength;a++){
@@ -56,7 +64,7 @@ class IncarnateGalleryCarousel{
         }
         const closeButton = newCarousel.getElementsByClassName('close-carousel')[0].addEventListener('click',IncarnateGalleryCarousel.closeCarousel);
         document.getElementsByTagName('body')[0].append(newCarousel);
-        $('.carousel').carousel({interval:13000});
+        $('.carousel').carousel({interval:interval});
         document.getElementsByTagName('html')[0].classList.add('carousel-active');
     }
     static closeCarousel(ev){

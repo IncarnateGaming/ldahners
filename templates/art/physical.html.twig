@@ -79,7 +79,7 @@
     <script>
         const incarnateGalleryCarousel = new IncarnateGalleryCarousel('artwork','piece-of-art');
         function carouselDeploy(ev){
-            IncarnateGalleryCarousel.deploy(ev,incarnateGalleryCarousel.carousel,'piece-of-art');
+            IncarnateGalleryCarousel.deploy(ev,incarnateGalleryCarousel);
         }
         incarnateGalleryCarousel.items.forEach(element=>{
             element.addEventListener('click',carouselDeploy);
