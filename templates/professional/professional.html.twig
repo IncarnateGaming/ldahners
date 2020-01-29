@@ -2,10 +2,14 @@
 
 {% block title %}Laury Dahners' Orthopedic Page{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('/style/Table.css') }}">
+{% endblock %}
 {% block body %}
     <h1>Laury Dahners' Orthopedic Page</h1>
     <p>This page has various orthopedic information and videos that are either not available or difficult to access elsewhere.</p>
-    <table class="table table-striped">
+    <table class="inc-table inc-table-striped">
         <tr>
             <td><a href="{{ asset('/assets/documents/orthopedic/A Text for Clinical Clerkships in Orthopedics 2.pdf') }}">An Orthopedic Minitext</a></td>
             <td>A brief (40 page) minitext for Orthopedic Medical Students</td>
@@ -27,16 +31,48 @@
             <td>A video demonstrating a relatively simple technique for performing hip arthroscopy which readily provides enough distraction of the femoral head from the acetabulum for good visualization.</td>
         </tr>
         <tr>
+            <td colspan="2">
+                <video class="incarnate-video" controls>
+                    <source src="{{ asset('/assets/videos/orthopedic/hipscope Shorta.mp4') }}" type="video/mp4">
+                    Your Browser does not support the video tag.
+                </video>
+            </td>
+        </tr>
+        <tr>
             <td><a href="{{ asset('/assets/videos/orthopedic/Hip scope osteoplasty 512 mb-sec2.mp4') }}">Arthroscopic Hip Osteoplasty</a></td>
             <td>A video demonstrating acetabular osteoplasty and femoral neck osteoplasty peformed for "hip impingement.</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <video class="incarnate-video" controls>
+                    <source src="{{ asset('/assets/videos/orthopedic/Hip scope osteoplasty 512 mb-sec2.mp4') }}" type="video/mp4">
+                    Your Browser does not support the video tag.
+                </video>
+            </td>
         </tr>
         <tr>
             <td><a href="{{ asset('assets/videos/orthopedic/fem nailing.mp4') }}">Femoral nailing with a distractor</a></td>
             <td>A video demonstrating percutaneous nailing using the same distractor used for hip arthroscopy above</td>
         </tr>
         <tr>
+            <td colspan="2">
+                <video class="incarnate-video" controls>
+                    <source src="{{ asset('/assets/videos/orthopedic/fem nailing.mp4') }}" type="video/mp4">
+                    Your Browser does not support the video tag.
+                </video>
+            </td>
+        </tr>
+        <tr>
             <td><a href="{{ asset('/assets/videos/orthopedic/Elbow dislocating on fluoro 1mbs file cropped.mp4') }}">Elbow instability</a></td>
             <td>Fluoroscopic video of unstable elbow</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <video class="incarnate-video" controls>
+                    <source src="{{ asset('/assets/videos/orthopedic/Elbow dislocating on fluoro 1mbs file cropped.mp4') }}" type="video/mp4">
+                    Your Browser does not support the video tag.
+                </video>
+            </td>
         </tr>
         <tr>
             <td><a href="{{ asset('/assets/documents/orthopedic/Elbow restabilization Technical Tip.pdf') }}">Elbow Restabilization Procedure</a></td>
@@ -47,8 +83,24 @@
             <td>Fluoroscopic video of restabilized elbow</td>
         </tr>
         <tr>
+            <td colspan="2">
+                <video class="incarnate-video" controls>
+                    <source src="{{ asset('/assets/videos/orthopedic/Restabilized Elbow.mp4') }}" type="video/mp4">
+                    Your Browser does not support the video tag.
+                </video>
+            </td>
+        </tr>
+        <tr>
             <td><a href="{{ asset('/assets/videos/orthopedic/Ankle instability 1 MBPS.mp4') }}">Ankle instability</a></td>
             <td>Fluoroscopic videos of unstable ankle</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <video class="incarnate-video" controls>
+                    <source src="{{ asset('/assets/videos/orthopedic/Ankle instability 1 MBPS.mp4') }}" type="video/mp4">
+                    Your Browser does not support the video tag.
+                </video>
+            </td>
         </tr>
         <tr>
             <td colspan="2">Videos that allow you to visualize the violence that occurs when people are injured. Provides a profound respect for the associated soft tissue injuries.</td>
@@ -57,53 +109,61 @@
             <td colspan="2"><a href="{{ asset('/assets/videos/orthopedic/kick-breaknosound.mp4') }}">Tibia breaks kickboxing</a></td>
         </tr>
         <tr>
+            <td colspan="2">
+                <video class="incarnate-video" controls>
+                    <source src="{{ asset('/assets/videos/orthopedic/kick-breaknosound.mp4') }}" type="video/mp4">
+                    Your Browser does not support the video tag.
+                </video>
+            </td>
+        </tr>
+        <tr>
             <td colspan="2"><a href="{{ asset('/assets/videos/orthopedic/tibia breaks.mp4') }}">Tibia breaks wrestling</a></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <video class="incarnate-video" controls>
+                    <source src="{{ asset('/assets/videos/orthopedic/tibia breaks.mp4') }}" type="video/mp4">
+                    Your Browser does not support the video tag.
+                </video>
+            </td>
         </tr>
         <tr>
             <td colspan="2"><a href="{{ asset('/assets/videos/orthopedic/motorcycle crash 512kbps.mp4') }}">Motorcycle wrecking</a></td>
         </tr>
         <tr>
+            <td colspan="2">
+                <video class="incarnate-video" controls>
+                    <source src="{{ asset('/assets/videos/orthopedic/motorcycle crash 512kbps.mp4') }}" type="video/mp4">
+                    Your Browser does not support the video tag.
+                </video>
+            </td>
+        </tr>
+        <tr>
             <td colspan="2">Self study powerpoint shows for medical students about the musculoskeletal system and its diseases.</td>
         </tr>
         <tr>
-            <td><a href=""></a></td>
-            <td></td>
+            <td colspan="2"><a href="{{ asset('/assets/documents/orthopedic/MSK Lab Day 1growth and genetics student self study powerpoint show.pptx') }}">Musculoskeletal growth and development self study .ppt</a></td>
         </tr>
         <tr>
-            <td><a href=""></a></td>
-            <td></td>
+            <td colspan="2"><a href="{{ asset('/assets/documents/orthopedic/MSK Lab Day 2 student self study powerpoint show.pptx') }}">Upper extremity x-ray anatomy self study.ppt</a></td>
         </tr>
         <tr>
-            <td><a href=""></a></td>
-            <td></td>
+            <td colspan="2"><a href="{{ asset('/assets/documents/orthopedic/MSK Lab Day 3 student self study powerpoint show.pptx') }}">Lower extremity x-ray anatomy self study .ppt</a></td>
         </tr>
         <tr>
-            <td><a href=""></a></td>
-            <td></td>
+            <td colspan="2"><a href="{{ asset('/assets/documents/orthopedic/MSK Lab Day 4 student self study powerpoint show.pptx') }}">Spine x-ray anatomy self study .ppt</a></td>
         </tr>
         <tr>
-            <td><a href=""></a></td>
-            <td></td>
+            <td colspan="2"><a href="{{ asset('/assets/documents/orthopedic/MSK Lab Day 5 student self study powerpoint show.pptx') }}">Metabolic and vascular bone disorders self study .ppt</a></td>
         </tr>
         <tr>
-            <td><a href=""></a></td>
-            <td></td>
+            <td colspan="2"><a href="{{ asset('/assets/documents/orthopedic/MSK Lab Day 6 student self study powerpoint show.pptx') }}">Musculoskeletal tumors and infections self study .ppt</a></td>
         </tr>
         <tr>
-            <td><a href=""></a></td>
-            <td></td>
+            <td colspan="2"><a href="{{ asset('/assets/documents/orthopedic/MSK Lab Day 8 student self study powerpoint show.pptx') }}">Inflammatory arthritis self study .ppt</a></td>
         </tr>
         <tr>
-            <td><a href=""></a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href=""></a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href=""></a></td>
-            <td></td>
+            <td colspan="2"><a href="{{ asset('/assets/documents/orthopedic/MSK Lab Day 9 student self study powerpoint show.pptx') }}">Osteoarthrits and crystalline arthritis self study .ppt</a></td>
         </tr>
     </table>
 {% endblock %}

@@ -1,0 +1,218 @@
+:root {
+  --ldahners1:#BDF2FE;
+  --ldahners1-dark: #526a6f;
+  --ldahners2:#00D0FF;
+  --ldahners2-dark: #00596d;
+  --ldahners3:#D4E5E5;
+  --ldahners3-dark: #616969;
+  --ldahners4:#ECFBFF;
+  --ldahners4-dark: #6e7577;
+  --ldahners5:#E1EDF0;
+  --ldahners5-dark: #6d7375;
+  --ldahners6:#A1ECFF;
+  --ldahners6-dark: #3e5c63;
+  --ldahners7:#FFE0A1;
+  --ldahners7-dark: #726549;
+  --inc-8: #0092b3;
+  --inc-9:#143C0E;
+}
+
+.inc-bg-primary {
+  background-color: var(--primary);
+}
+
+.inc-bg-secondary {
+  background-color: var(--secondary);
+}
+
+.inc-bg-light {
+  background-color: var(--light);
+}
+
+.inc-bg-dark {
+  background-color: var(--dark);
+}
+
+html .inc-text-primary {
+  color: var(--primary);
+}
+
+html .inc-text-secondary {
+  color: var(--secondary);
+}
+
+html .inc-text-light {
+  color: var(--light);
+}
+
+html .inc-text-dark {
+  color: var(--dark);
+}
+
+html .inc-bg-ldahners1 {
+  background-color: #BDF2FE;
+}
+
+html .inc-bg-ldahners1-dark {
+  background-color: #526a6f;
+}
+
+html .inc-bg-ldahners2 {
+  background-color: #00D0FF;
+}
+
+html .inc-bg-ldahners2-dark {
+  background-color: #00596d;
+}
+
+html .inc-bg-ldahners3 {
+  background-color: #D4E5E5;
+}
+
+html .inc-bg-ldahners3-dark {
+  background-color: #616969;
+}
+
+html .inc-bg-ldahners4 {
+  background-color: #ECFBFF;
+}
+
+html .inc-bg-ldahners4-dark {
+  background-color: #6e7577;
+}
+
+html .inc-bg-ldahners5 {
+  background-color: #E1EDF0;
+}
+
+html .inc-bg-ldahners5-dark {
+  background-color: #6d7375;
+}
+
+html .inc-bg-ldahners6 {
+  background-color: #A1ECFF;
+}
+
+html .inc-bg-ldahners6-dark {
+  background-color: #3e5c63;
+}
+
+html .inc-bg-ldahners7 {
+  background-color: #FFE0A1;
+}
+
+html .inc-bg-ldahners7-dark {
+  background-color: #726549;
+}
+
+html .inc-bg-8 {
+  background-color: #0092b3;
+}
+
+html .inc-bg-9 {
+  background-color: #143C0E;
+}
+
+html .inc-bg-black {
+  background-color: black;
+}
+
+html .inc-bg-white {
+  background-color: white;
+}
+
+html .inc-text-ldahners1 {
+  color: #BDF2FE;
+}
+
+html .inc-text-ldahners1-dark {
+  color: #526a6f;
+}
+
+html .inc-text-ldahners2 {
+  color: #00D0FF;
+}
+
+html .inc-text-ldahners2-dark {
+  color: #00596d;
+}
+
+html .inc-text-ldahners3 {
+  color: #D4E5E5;
+}
+
+html .inc-text-ldahners3-dark {
+  color: #616969;
+}
+
+html .inc-text-ldahners4 {
+  color: #ECFBFF;
+}
+
+html .inc-text-ldahners4-dark {
+  color: #6e7577;
+}
+
+html .inc-text-ldahners5 {
+  color: #E1EDF0;
+}
+
+html .inc-text-ldahners5-dark {
+  color: #6d7375;
+}
+
+html .inc-text-ldahners6 {
+  color: #A1ECFF;
+}
+
+html .inc-text-ldahners6-dark {
+  color: #3e5c63;
+}
+
+html .inc-text-ldahners7 {
+  color: #FFE0A1;
+}
+
+html .inc-text-ldahners7-dark {
+  color: #726549;
+}
+
+html .inc-text-8 {
+  color: #0092b3;
+}
+
+html .inc-text-9 {
+  color: #143C0E;
+}
+
+html .inc-text-black {
+  color: black;
+}
+
+html .inc-text-black {
+  color: white;
+}
+
+.inc-table {
+  border-collapse: collapse;
+  border: 2px solid var(--ldahners5-dark);
+  background-color: var(--ldahners3-dark);
+}
+.inc-table th, .inc-table td {
+  border: 1px solid var(--ldahners5-dark);
+}
+.inc-table td, .inc-table th {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+.inc-table a {
+  color: black;
+}
+
+.inc-table-striped tr:nth-child(even) {
+  background-color: var(--ldahners5-dark);
+}
+
+/*# sourceMappingURL=Table.css.map */

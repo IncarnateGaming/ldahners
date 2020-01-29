@@ -1,0 +1,24 @@
+@use 'sass:map';
+@import 'ldahnersColors';
+.inc-table{
+  border-collapse: collapse;
+  border: 2px solid var(--ldahners5-dark);
+  background-color: var(--ldahners3-dark);
+  th,td{
+    border: 1px solid var(--ldahners5-dark);
+  }
+  td,th{
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+    padding-top:0.1rem;
+    padding-bottom: 0.1rem;
+  }
+  a{
+    color:black;
+  }
+}
+.inc-table-striped{
+  tr:nth-child(even){
+    background-color: var(--ldahners5-dark);
+  }
+}

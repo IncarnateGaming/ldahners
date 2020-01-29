@@ -649,6 +649,14 @@ html .inc-text-black {
     max-width: 1400px;
   }
 }
+.incarnate-video {
+  width: min(100%, calc(90vh / 3 * 4));
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 .incarnate-video-2 {
   width: 360px;
   height: 270px;
