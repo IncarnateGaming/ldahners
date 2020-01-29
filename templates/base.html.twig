@@ -84,7 +84,9 @@
                     {% block backButton %}{% endblock %}
                 </ul>
             </div>
-            <img src="{{ asset('/assets/images/0-simple-help-tiny.jpg') }}" class="mr-1 inc-closing-logo">
+            {% block additionalLogos %}
+                <img src="{{ asset('/assets/images/0-simple-help-tiny.jpg') }}" class="mr-1 inc-closing-logo">
+            {% endblock %}
         </nav>
         {% block javascripts %}
             <script>

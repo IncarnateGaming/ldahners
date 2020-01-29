@@ -266,4 +266,8 @@
         });
     </script>
 {% endblock %}
-
+{% block additionalLogos %}
+    <img src="{{ asset('/assets/images/charity/Tar Hawk symbol for website.jpg') }}" class="mr-1 inc-closing-logo">
+    <p class="inc-closing-logo">The "TarHawk" symbol designed by Felix Balladeres Zamora</p>
+    {{ parent() }}
+{% endblock %}
