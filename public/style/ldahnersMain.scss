@@ -127,11 +127,30 @@ footer.page-footer{
 }
 @media (min-width: 1200px) {
 }
+//Columns
+.inc-col-md-6{
+  position:relative;
+  width:100%;
+  min-height:1px;
+  padding-left:5px;
+  padding-right:5px;
+}
+@media (min-width: 768px){
+  .inc-col-md-6{
+    flex: 0 0 49%;
+    max-width: 49%;
+  }
+}
+.inc-left-pane{
+  margin-right:2%;
+}
 @import '../bootstrap-4.0.0/scss/bootstrap.scss';
 a {
   color: var(--inc-8);
 }
-
+.inc-bg-ldahners3-dark a, .inc-bg-ldahners5-dark a{
+  color: var(--inc-9);
+}
 
 // Header
 .navbar-toggler-icon{

@@ -15,8 +15,6 @@ class IncarnateGalleryCarousel{
         const carousel = document.createElement('div');
         carousel.setAttribute('id',this.name);
         carousel.setAttribute('class','carousel slide carousel-fade d-flex');
-        carousel.setAttribute('data-ride','carousel');
-        carousel.setAttribute('data-interval','13000');
         const ol = document.createElement('ol');
         ol.setAttribute('class','carousel-indicators');
         const carouselInner = document.createElement('div');
@@ -26,10 +24,7 @@ class IncarnateGalleryCarousel{
             ol.innerHTML += `<li data-target="#${this.name}" data-slide-to="${a}"></li>`;
             carouselInner.innerHTML +=
                 `<div class="carousel-item item" data-count="${this.items[a].getAttribute('data-count')}">
-                    <a href="${this.items[a].getElementsByTagName('img')[0].getAttribute('src')}" class="d-flex flex-column">
-<!--                        <img class="d-block my-auto" src="${this.items[a].getElementsByTagName('img')[0].getAttribute('src')}">-->
                         ${this.items[a].innerHTML}
-                    </a>
                 </div>`;
         }
         carousel.innerHTML += ol.outerHTML;
@@ -60,6 +55,7 @@ class IncarnateGalleryCarousel{
         }
         const closeButton = newCarousel.getElementsByClassName('close-carousel')[0].addEventListener('click',IncarnateGalleryCarousel.closeCarousel);
         document.getElementsByTagName('body')[0].append(newCarousel);
+        $('.carousel').carousel({interval:13000});
         document.getElementsByTagName('html')[0].classList.add('carousel-active');
     }
     static closeCarousel(ev){
