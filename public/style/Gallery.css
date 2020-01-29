@@ -4,7 +4,7 @@
 }
 
 .piece-of-art img {
-  max-width: 15rem;
+  max-width: min(100%, 15rem);
   max-height: 15rem;
   cursor: pointer;
 }
@@ -49,6 +49,7 @@ html .carousel img {
 html .carousel .art-caption {
   max-width: unset;
   margin-bottom: 6rem;
+  color: white;
 }
 
 html.carousel-active .inc-nav-body {
