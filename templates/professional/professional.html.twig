@@ -168,6 +168,6 @@
     </table>
 {% endblock %}
 {% block additionalLogos %}
-    <button onclick="window.location.href=`{{ asset('/assets/documents/cv/LEDCV REV 2018.pdf') }}`" class="btn m-2 inc-button-color inc-bg-ldahners7">Professional CV</button>
+    <a href="{{ asset('/assets/documents/cv/LEDCV REV 2018.pdf') }}" class="inc-closing-logo"><button  class="btn m-2 inc-button-color inc-bg-ldahners7">Professional CV</button></a>
     {{ parent() }}
 {% endblock %}
