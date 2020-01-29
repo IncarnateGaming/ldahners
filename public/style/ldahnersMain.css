@@ -862,6 +862,18 @@ footer.page-footer {
     padding-top: unset;
   }
 }
+.inc-col-left {
+  order: 2;
+}
+
+.inc-col-main {
+  order: 1;
+}
+
+.inc-col-right {
+  order: 3;
+}
+
 .inc-col-md-4 {
   position: relative;
   width: 100%;
@@ -874,6 +886,7 @@ footer.page-footer {
   .inc-col-md-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
+    order: unset;
   }
 }
 .inc-col-md-6 {
@@ -888,6 +901,7 @@ footer.page-footer {
   .inc-col-md-6 {
     flex: 0 0 49%;
     max-width: 49%;
+    order: unset;
   }
 }
 .inc-left-pane {
