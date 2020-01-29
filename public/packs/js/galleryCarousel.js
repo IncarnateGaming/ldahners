@@ -16,6 +16,7 @@ class IncarnateGalleryCarousel{
         const carousel = document.createElement('div');
         carousel.setAttribute('id',this.name);
         carousel.setAttribute('class','carousel slide carousel-fade d-flex');
+        // carousel.setAttribute('ride','carousel');
         const ol = document.createElement('ol');
         ol.setAttribute('class','carousel-indicators');
         const carouselInner = document.createElement('div');
@@ -44,9 +45,9 @@ class IncarnateGalleryCarousel{
     }
 
     /**
-     * @param ev - the click event
-     * @param carousel - the carousel built with the construct function
-     * @param interval
+     * @param ev - click event
+     * @param incarnateGalleryCarousel - IncarnateGalleryCarousel class object
+     * @param interval - time between slide in ms
      */
     static deploy(ev,incarnateGalleryCarousel,interval){
         interval = interval || 13000;
@@ -54,6 +55,7 @@ class IncarnateGalleryCarousel{
         const item = IncarnateReference.getClosestClass(ev.target,incarnateGalleryCarousel.itemClass);
         const dataCount = item.getAttribute('data-count');
         const newCarousel = incarnateGalleryCarousel.carousel.cloneNode(true);
+        newCarousel.setAttribute('data-interval',interval);
         const items = newCarousel.getElementsByClassName('carousel-item');
         const itemLength = items.length;
         for (var a=0;a<itemLength;a++){
@@ -64,7 +66,9 @@ class IncarnateGalleryCarousel{
         }
         const closeButton = newCarousel.getElementsByClassName('close-carousel')[0].addEventListener('click',IncarnateGalleryCarousel.closeCarousel);
         document.getElementsByTagName('body')[0].append(newCarousel);
-        $('.carousel').carousel({interval:interval});
+        // This alternative method will cause the carousel to start immediately instead of waiting for the user to advance it once.
+        // Need to remove "data-ride" from the carousel creation to use
+        // $('.carousel').carousel({interval:interval});
         document.getElementsByTagName('html')[0].classList.add('carousel-active');
     }
     static closeCarousel(ev){
