@@ -1,20 +1,64 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello PolicyController!{% endblock %}
-
+{%  extends 'base.html.twig' %}
+{% block title %}Policy{% endblock %}
+{% block policyAccept %}{% endblock %}
+{% block analytics %}{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="container">
+        <h2>Who we are</h2>
+        <p>Our website address is: <a href="{{ url('app_home') }}">{{ url('app_home') }}</a></p>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+        <h2>What personal data we collect and why we collect it</h2>
+        <p>We collect responses to our "Account Registration" form including username, email, hashed password, and date of accepting this policy. When you create an account and each time you login afterwards a login cookie will be used so that we do not have to ask you for your login information on every page.</p>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'D:/IncarnateGaming/Fiverr/gigs/symfony/ldahners/src/Controller/PolicyController.php'|file_link(0) }}">src/Controller/PolicyController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'D:/IncarnateGaming/Fiverr/gigs/symfony/ldahners/templates/policy/index.html.twig'|file_link(0) }}">templates/policy/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <h3>Media</h3>
+        <p>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p>
+
+        <h3>Contact forms</h3>
+        <p>When you send us information, we are allowed to use that information to change and improve our site(s), product(s), and/or service(s). Thank you for all the feedback and help making this a better place.</p>
+
+        <h3>Account Details</h3>
+        <p>If you have an account with us we will maintain all information you provide during account creation (username, email, hashed password, and date of accepting this policy). Passwords are encrypted with argon2i (or better) and only their gibberfied hash is stored on our servers. Best security practice is to use a non-dictionary password that is unique for every website you use as a lot of lower end websites (like ours) rely heavily on this gibberfication to protect the passwords. Even though we have admin access restricted to our specific ip address, it is very possible for hackers to gain lists of these gibberfied passwords from our servers and then have a program attempt billions of different values until they get a match, hence learning the password. We have done our best to secure your information to minimize this risk, but we are a small project that does not have the resources for 'true' security in this day and age and any talented hacker will be able to breach our servers. (This is also why we entrust all sensitive financial information to large dedicated services such as Patreon and Paypal that have the resources for 'true' security and do not store any of that information on our servers).</p>
+
+        <h3>Cookies</h3>
+        <p>If you have an account with our website you will receive a mandatory 'PHPSESSID' cookie while logged in. This session cookie allows us to know it is still you as you move from page to page (without having to re-enter your password on every page). You may also choose to have us remember your login. Doing so will cause a 30 day "REMEMBERME" cookie to be created that will allow us to remember you.</p>
+
+        <h3>Embedded content from other websites</h3>
+
+        <p>We have chose to host all images and videos locally. We do have hyperlinks that will take you to many other websites, most of whom choose to use cookies for more than just login verification.</p>
+
+        <h2>Analytics</h2>
+        <h3>Who we share your data with</h3>
+        <p>We do our best to not share any personal information. We do not believe in selling information for targeted adds or other spam. We do believe that by looking to the past we can build a better future, but none of this should be done in the shadows. When we share information it should be done publicly and with anonymous data, such as listing best selling books.</p>
+
+        <h2>How long we retain your data</h2>
+        <p>If you leave a comment, review, or other feedback (henceforth "comment"), the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.</p>
+
+        <p>For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p>
+
+        <h2>What rights you have over your data</h2>
+        <p>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p>
+
+        <h2>Where we send your data</h2>
+        <p>Visitor comments may be checked through an automated spam detection service.</p>
+
+        <h2>Our contact information</h2>
+
+        <p><b>Author:</b> Laury Dahners - <a href="mailto:ldahners@gmail.com">ldahners@gmail.com</a></p>
+
+        <h2>Additional information</h2>
+        <h3>How we protect your data</h3>
+        <p>This is a small website designed to display content, not keep data secure. As such we cannot guarantee the security of any data uploaded to this website. For this reason, we rely on <a href="https://www.amazon.com/Laurence-Dahners/e/B004P62XJQ?ref=sr_ntt_srch_lnk_3&qid=1580421022&sr=8-3">Amazon</a> and their security to secure all financial information (and are never in possession of said information).</p>
+
+        <h3>What data breach procedures we have in place</h3>
+        <p>As we grow we will add these. For now please do not send us <em>any</em> data that would matter if it was breached.</p>
+
+        <h3>What third parties we receive data from</h3>
+        <p>Amazon sends us a list of sales. As our website is not secure, we do not keep any of that information on our website.</p>
+
+        <h3>What automated decision making and/or profiling we do with user data</h3>
+        <p>We have spam filters to attempt to detect spam and fake accounts. They are young and likely have many bugs. If we accidentally mute a real account please email: incarnategamingllc@gmail.com</p>
+
+        <h3>Industry regulatory disclosure requirements</h3>
+        <p>I do not know of any regulatory requirements. If any exist, please email incarnategamingllc@gmail.com from an official email (.gov or .org).</p>
+    </div>
 {% endblock %}

@@ -43,6 +43,11 @@ class User implements UserInterface
      */
     private $email;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $AgreedToTermsOn;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -124,6 +129,18 @@ class User implements UserInterface
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getAgreedToTermsOn(): ?\DateTimeInterface
+    {
+        return $this->AgreedToTermsOn;
+    }
+
+    public function setAgreedToTermsOn(\DateTimeInterface $AgreedToTermsOn): self
+    {
+        $this->AgreedToTermsOn = $AgreedToTermsOn;
 
         return $this;
     }

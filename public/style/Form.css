@@ -1,0 +1,15 @@
+form {
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: min-content;
+}
+form input {
+  display: block;
+  width: 20rem;
+}
+form input[type=checkbox] {
+  width: unset;
+}
+
+/*# sourceMappingURL=Form.css.map */

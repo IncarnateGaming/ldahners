@@ -1,0 +1,13 @@
+form{
+  align-content: center;
+  margin-left:auto;
+  margin-right:auto;
+  width:min-content;
+  input{
+    display:block;
+    width:20rem;
+  }
+  input[type='checkbox']{
+    width:unset;
+  }
+}

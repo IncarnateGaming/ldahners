@@ -25,7 +25,8 @@
     <body class="d-flex flex-column">
         <div class="inc-nav-body inc-text-ldahners4 inc-bg-ldahners2-dark">
             <div class="inc-nav-flex-holder"></div>
-            <div class="inc-body inc-flex-grow">
+            <div class="inc-body d-flex flex-column">
+                <div class="inc-flex-grow">
                 {% for message in app.flashes('success') %}
                     <div class="alert alert-success">
                         {{ message }}
@@ -36,6 +37,7 @@
                         {% block body %}{% endblock %}
                     </div>
                 {% endblock %}
+                </div>
                 <footer class="page-footer font-small inc-banners inc-bg-ldahners4-dark">
                     <div class="footer-copyright text-center py-3 inc-text-light">
                         © 2020 <a class="inc-text-light" href="https://www.incarnategamingllc.com/hire/">Incarnate Gaming LLC</a>
@@ -101,10 +103,10 @@
 {#            {% block policyAccept %}<script src="{{ asset('packs/js/policyAccept.js') }}"></script>{% endblock %}#}
             <script src="{{ asset('packs/js/colorTryer.js') }}"></script>
             <script>
-                IncarnateColorTryer.build('inc-nav-body','color','Page Text Color');
-                IncarnateColorTryer.build('inc-nav-body','background-color','Page Background Color');
-                IncarnateColorTryer.build('inc-banners','background-color','Header Footer Background Color');
-                IncarnateColorTryer.build('inc-button-color','background-color','Button Color');
+                // IncarnateColorTryer.build('inc-nav-body','color','Page Text Color');
+                // IncarnateColorTryer.build('inc-nav-body','background-color','Page Background Color');
+                // IncarnateColorTryer.build('inc-banners','background-color','Header Footer Background Color');
+                // IncarnateColorTryer.build('inc-button-color','background-color','Button Color');
             </script>
         {% endblock %}
     </body>

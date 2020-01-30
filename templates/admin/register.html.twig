@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('/style/Form.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    {{ form_start(registrationForm) }}
+        <h1>Create Admin Account</h1>
+        {{ form_row(registrationForm.username) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button class="btn my-2">Register</button>
+    {{ form_end(registrationForm) }}
+{% endblock %}
