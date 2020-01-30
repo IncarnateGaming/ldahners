@@ -34,10 +34,10 @@ class IncarnateAutoplay{
     toggleAutoplay(ev){
         if(incarnateAutoplay.autoplay){
             incarnateAutoplay.autoplay = false;
-            ev.target.innerHTML = 'Turn Autoplay On';
+            ev.target.innerHTML = 'Turn Next Song Autoplay On';
         }else{
             incarnateAutoplay.autoplay = true;
-            ev.target.innerHTML = 'Turn Autoplay Off';
+            ev.target.innerHTML = 'Turn Next Song Autoplay Off';
         }
     }
 }
