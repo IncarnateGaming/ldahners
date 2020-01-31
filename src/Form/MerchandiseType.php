@@ -8,6 +8,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class MerchandiseType extends AbstractType
 {
@@ -16,7 +17,7 @@ class MerchandiseType extends AbstractType
         $builder
             ->add('Name')
             ->add('Description')
-            ->add('Image')
+            ->add('imageFile',VichImageType::class)
             ->add('Link')
             ->add('Series',EntityType::class,[
                 'class'=>Series::class,

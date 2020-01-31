@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Series{% endblock %}
+{% block title %}Edit {% endblock %}
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('/style/Form.css') }}">
@@ -9,7 +9,7 @@
 {% block body %}
 
     {{ include('admin/_form_series.html.twig',{
-        title_text: 'New Series',
-        submit_text: 'Create!'
+        title_text: 'Edit the Series',
+        submit_text: 'Update!'
     }) }}
 {% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}List Books{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('/style/Table.css') }}">
+    <link rel="stylesheet" href="{{ asset('/style/TableLimiters.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <h2>Current Books</h2>
+    <table class="inc-table inc-table-striped">
+        <tr>
+            <th>Edit Link</th>
+            <th>#</th>
+            <th>Image</th>
+            <th>Series</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Amazon</th>
+            <th>Delete Book</th>
+        </tr>
+        {% for book in books %}
+            <tr>
+                <td><a href="{{ path('app_admin_edit_book',{
+                        id: book.id
+                    }) }}"><button class="btn-success">Edit</button></a></td>
+                <td>{{ book.orderInSeries }}</td>
+                <td>
+                    <img src="{{ vich_uploader_asset(book,'imageFile') }}">
+                </td>
+                <td>{{ book.Series.name }}</td>
+                <td>{{ book.Name }}</td>
+                <td><div class="td">{{ book.Description }}</div></td>
+                <td><div class="td"><a href="{{ book.AmazonLink }}">{{ book.AmazonLink }}</a></div></td>
+                <td><button class="btn-warning delete-button" data-delete="{{ path('app_admin_delete_book',{
+                        id: book.id
+                    }) }}" data-label="{{ book.Name }}">Delete</button></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{asset('packs/js/deleteButton.js')}}"></script>
+{% endblock %}

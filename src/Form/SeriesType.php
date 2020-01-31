@@ -14,6 +14,7 @@ class SeriesType extends AbstractType
         $builder
             ->add('Name')
             ->add('Description')
+            ->add('SeriesPriority')
         ;
     }
 

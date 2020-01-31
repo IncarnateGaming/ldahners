@@ -8,6 +8,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class BookType extends AbstractType
 {
@@ -17,7 +18,7 @@ class BookType extends AbstractType
             ->add('Name')
             ->add('OrderInSeries')
             ->add('Description')
-            ->add('Image')
+            ->add('imageFile',VichImageType::class)
             ->add('AmazonLink')
             ->add('Series',EntityType::class,[
                 'class'=>Series::class,

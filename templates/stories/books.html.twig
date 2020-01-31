@@ -1,20 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello StoriesController!{% endblock %}
+{% block title %}Stories{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('/style/Stories.css') }}">
+{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'D:/IncarnateGaming/Fiverr/gigs/symfony/ldahners/src/Controller/StoriesController.php'|file_link(0) }}">src/Controller/StoriesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'D:/IncarnateGaming/Fiverr/gigs/symfony/ldahners/templates/stories/physical.html.twig'|file_link(0) }}">templates/stories/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <h2>Writing science fiction turns out to be a lot of fun!</h2>
+    <h3>Below are the covers of all of my books</h3>
+    <p>(Click on a cover for more information)</p>
+    <div class="d-flex flex-column">
+    {% for serial in series %}
+        <div class="d=flex flex-column">
+            <h4>{{ serial.name }}</h4>
+            <p>{{ serial.description }}</p>
+            <div class="inc-flex-orientation">
+                <div class="books d-flex flex-wrap">
+                    {% for book in serial.books %}
+                        <div class="inc-book-image">
+                            <a href="{{ book.AmazonLink }}">
+                                <img src="{{ vich_uploader_asset(book,'imageFile') }}">
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="merchandise d-flex flex-wrap">
+                    {% for merchandise in serial.merchandise %}
+                        <div class="inc-book-image">
+                            <img src="{{ vich_uploader_asset(merchandise,'imageFile') }}">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
 {% endblock %}

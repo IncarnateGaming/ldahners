@@ -52,6 +52,9 @@ nav.inc-sticky-header::-webkit-scrollbar {
   padding-top:3.4rem;
   height:max(100vh,100%);
 }
+.inc-nav-body{
+  flex:1;
+}
 #incarnate-logo{
   display:none;
 }

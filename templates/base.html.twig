@@ -58,6 +58,23 @@
                     <li class="nav-item">
                         <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_stories')|index_stripper }}'">Novels & Short Stories</button>
                     </li>
+                    {%  if is_granted('ROLE_ADMIN') %}
+                        <li class="nav-item">
+                            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_series')|index_stripper }}'">New Series</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_book')|index_stripper }}'">New Book</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_merchandise')|index_stripper }}'">New Merchandise</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_series')|index_stripper }}'">List Series</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_books')|index_stripper }}'">List Books</button>
+                        </li>
+                    {% endif %}
                     <li class="nav-item">
                         <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_songs_vocal')|index_stripper }}'">Songs</button>
                     </li>

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}List Series{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('/style/Table.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <h2>Current Series</h2>
+    <table class="inc-table inc-table-striped">
+        <tr>
+            <th>Edit Link</th>
+            <th>#</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Delete Series</th>
+        </tr>
+        {% for serial in series %}
+            <tr>
+                <td><a href="{{ path('app_admin_edit_serial',{
+                        id: serial.id
+                    }) }}"><button class="btn-success">Edit</button></a></td>
+                <td>{{ serial.seriesPriority }}</td>
+                <td>{{ serial.Name }}</td>
+                <td>{{ serial.Description }}</td>
+                <td><button class="btn-warning delete-button" data-delete="{{ path('app_admin_delete_serial',{
+                        id: serial.id
+                    }) }}" data-label="{{ serial.Name }}">Delete</button></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{asset('packs/js/deleteButton.js')}}"></script>
+{% endblock %}

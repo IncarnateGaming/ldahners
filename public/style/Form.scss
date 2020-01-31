@@ -10,4 +10,17 @@ form{
   input[type='checkbox']{
     width:unset;
   }
+  textarea{
+    width:100%;
+    height:30vh;
+    display:block;
+  }
+  select{
+    display:block;
+    width:100%;
+  }
+  img{
+    max-width:20rem;
+    max-height:20rem;
+  }
 }

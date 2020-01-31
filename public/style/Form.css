@@ -11,5 +11,18 @@ form input {
 form input[type=checkbox] {
   width: unset;
 }
+form textarea {
+  width: 100%;
+  height: 30vh;
+  display: block;
+}
+form select {
+  display: block;
+  width: 100%;
+}
+form img {
+  max-width: 20rem;
+  max-height: 20rem;
+}
 
 /*# sourceMappingURL=Form.css.map */

@@ -40,6 +40,11 @@ class Series
      */
     private $Merchandise;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $SeriesPriority;
+
     public function __construct()
     {
         $this->books = new ArrayCollection();
@@ -133,6 +138,18 @@ class Series
                 $merchandise->setSeries(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSeriesPriority(): ?int
+    {
+        return $this->SeriesPriority;
+    }
+
+    public function setSeriesPriority(int $SeriesPriority): self
+    {
+        $this->SeriesPriority = $SeriesPriority;
 
         return $this;
     }

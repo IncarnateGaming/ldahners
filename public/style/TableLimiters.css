@@ -1,0 +1,11 @@
+table img {
+  max-height: 10rem;
+  max-width: 10rem;
+}
+table .td {
+  max-height: 10rem;
+  max-width: 10rem;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=TableLimiters.css.map */

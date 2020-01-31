@@ -794,6 +794,10 @@ nav.inc-sticky-header::-webkit-scrollbar {
   height: max(100vh, 100%);
 }
 
+.inc-nav-body {
+  flex: 1;
+}
+
 #incarnate-logo {
   display: none;
 }
