@@ -9,6 +9,11 @@
 {% block body %}
 
     {{ form_start(registrationForm) }}
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
         <h1>Create Admin Account</h1>
         {{ form_row(registrationForm.username) }}
         {{ form_row(registrationForm.email) }}

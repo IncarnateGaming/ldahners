@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('/style/Form.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    {{ form_start(merchandiseForm) }}
+        {{ form_widget(merchandiseForm) }}
+    <button class="btn my-2">Create Merchandise</button>
+    {{ form_end(merchandiseForm) }}
+{% endblock %}
