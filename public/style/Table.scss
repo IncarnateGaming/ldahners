@@ -1,6 +1,8 @@
 @use 'sass:map';
 @import 'ldahnersColors';
 .inc-table{
+  margin-left:auto;
+  margin-right:auto;
   border-collapse: collapse;
   border: 2px solid var(--ldahners5-dark);
   background-color: var(--ldahners3-dark);

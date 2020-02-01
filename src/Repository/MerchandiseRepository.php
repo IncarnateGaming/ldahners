@@ -18,6 +18,9 @@ class MerchandiseRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Merchandise::class);
     }
+    public function findAllSortedPriority(){
+        return $this->findBy(array(),array('Series'=>'ASC'));
+    }
 
     // /**
     //  * @return Merchandise[] Returns an array of Merchandise objects

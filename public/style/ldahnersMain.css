@@ -760,6 +760,11 @@ html body {
   flex: 1;
 }
 
+.inc-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .inc-nudge-l1 {
   left: -1rem;
   width: calc(100% + 1rem);
@@ -781,11 +786,16 @@ nav.inc-sticky-header {
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  max-height: 100vh;
   -ms-overflow-style: none;
   padding: 0.5rem;
 }
 
 nav.inc-sticky-header::-webkit-scrollbar {
+  display: none;
+}
+
+.hideNav nav.navbar {
   display: none;
 }
 
@@ -859,6 +869,10 @@ footer.page-footer {
     height: 100vh;
   }
 
+  .hideNav nav.navbar {
+    display: block;
+  }
+
   nav.inc-sticky-header div.collapse {
     display: block;
   }
@@ -917,11 +931,11 @@ footer.page-footer {
     max-width: 49%;
     order: unset;
   }
-}
-.inc-left-pane {
-  margin-right: 2%;
-}
 
+  .inc-left-pane {
+    margin-right: 2%;
+  }
+}
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors

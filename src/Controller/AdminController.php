@@ -4,11 +4,13 @@ namespace App\Controller;
 
 use App\Entity\Book;
 use App\Entity\Merchandise;
+use App\Entity\Review;
 use App\Entity\Series;
 use App\Entity\User;
 use App\Form\BookType;
 use App\Form\MerchandiseType;
 use App\Form\RegistrationFormType;
+use App\Form\ReviewType;
 use App\Form\SeriesType;
 use App\Security\LoginFormAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
@@ -160,7 +162,7 @@ class AdminController extends AbstractController
             return $this->redirectToRoute('app_admin_list_books');
         }
         $form->handleRequest($request);
-        return $this->render('admin/newBook.html.twig', [
+        return $this->render('admin/editBook.html.twig', [
             'bookForm' => $form->createView(),
         ]);
     }
@@ -168,10 +170,10 @@ class AdminController extends AbstractController
      * @Route("/admin/delete/book/{id}", name="app_admin_delete_book")
      */
     public function deleteBook(EntityManagerInterface $em, $id){
-        $serial = $em->getRepository(Series::class)->find($id);
-        $em->remove($serial);
+        $book = $em->getRepository(Book::class)->find($id);
+        $em->remove($book);
         $em->flush();
-        return $this->redirectToRoute('app_admin_list_series');
+        return $this->redirectToRoute('app_admin_list_books');
     }
     /**
      * @Route("/admin/new/merchandise", name="app_admin_new_merchandise")
@@ -190,5 +192,95 @@ class AdminController extends AbstractController
         return $this->render('admin/newMerchandise.html.twig', [
             'merchandiseForm' => $form->createView(),
         ]);
+    }
+    /**
+     * @Route("/admin/list/merchandise", name="app_admin_list_merchandise")
+     */
+    public function listMerchandise(EntityManagerInterface $em){
+        $merchandise = $em->getRepository(Merchandise::class)->findAllSortedPriority();
+        return $this->render('admin/listMerchandise.html.twig', [
+            'merchandise' => $merchandise,
+        ]);
+    }
+    /**
+     * @Route("/admin/edit/merchandise/{id}", name="app_admin_edit_merchandise")
+     */
+    public function editMerchandise(EntityManagerInterface $em ,Request $request, Merchandise $merchandise){
+        $form = $this->createForm(MerchandiseType::class,$merchandise);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $merchandise = $form->getData();
+            $em->persist($merchandise);
+            $em->flush();
+            $this->addFlash('success','Merchandise edited!');
+            return $this->redirectToRoute('app_admin_list_merchandise');
+        }
+        $form->handleRequest($request);
+        return $this->render('admin/editMerchandise.html.twig', [
+            'merchandiseForm' => $form->createView(),
+        ]);
+    }
+    /**
+     * @Route("/admin/delete/merchandise/{id}", name="app_admin_delete_merchandise")
+     */
+    public function deleteMerchandise(EntityManagerInterface $em, $id){
+        $merchandise = $em->getRepository(Merchandise::class)->find($id);
+        $em->remove($merchandise);
+        $em->flush();
+        return $this->redirectToRoute('app_admin_list_merchandise');
+    }
+    /**
+     * @Route("/admin/new/review", name="app_admin_new_review")
+     */
+    public function newReview(EntityManagerInterface $em ,Request $request){
+        $form = $this->createForm(ReviewType::class);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $review = $form->getData();
+            $em->persist($review);
+            $em->flush();
+            $this->addFlash('success','New Review is added!');
+            return $this->redirectToRoute('app_admin_list_review');
+        }
+        $form->handleRequest($request);
+        return $this->render('admin/newReview.html.twig', [
+            'reviewForm' => $form->createView(),
+        ]);
+    }
+    /**
+     * @Route("/admin/list/review", name="app_admin_list_review")
+     */
+    public function listReview(EntityManagerInterface $em){
+        $review = $em->getRepository(Review::class)->findAllSortedPriority();
+        return $this->render('admin/listReview.html.twig', [
+            'review' => $review,
+        ]);
+    }
+    /**
+     * @Route("/admin/edit/review/{id}", name="app_admin_edit_review")
+     */
+    public function editReview(EntityManagerInterface $em ,Request $request, Review $review){
+        $form = $this->createForm(ReviewType::class,$review);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $review = $form->getData();
+            $em->persist($review);
+            $em->flush();
+            $this->addFlash('success','New Review is added!');
+            return $this->redirectToRoute('app_admin_list_review');
+        }
+        $form->handleRequest($request);
+        return $this->render('admin/editReview.html.twig', [
+            'reviewForm' => $form->createView(),
+        ]);
+    }
+    /**
+     * @Route("/admin/delete/review/{id}", name="app_admin_delete_review")
+     */
+    public function deleteReview(EntityManagerInterface $em, $id){
+        $review = $em->getRepository(Review::class)->find($id);
+        $em->remove($review);
+        $em->flush();
+        return $this->redirectToRoute('app_admin_list_review');
     }
 }

@@ -12,10 +12,20 @@ class NavFunctions{
             return true;
         }
         incScrolling = true;
-        if(window.scrollY>500){
-            NavFunctions.showTop();
-        }else{
-            NavFunctions.hideTop();
+        const navbarSupportedContent = document.getElementById('navbarSupportedContent');
+        if(navbarSupportedContent === undefined || navbarSupportedContent.classList.contains('show') !== true) {
+            if (window.scrollY === 0) {
+                document.getElementById('inc-top-html').classList.remove('hideNav');
+            } else if (incLastKnownScroll < window.scrollY) {
+                document.getElementById('inc-top-html').classList.add('hideNav');
+            } else if (incLastKnownScroll > window.scrollY) {
+                document.getElementById('inc-top-html').classList.remove('hideNav');
+            }
+            if (window.scrollY > 500) {
+                NavFunctions.showTop();
+            } else {
+                NavFunctions.hideTop();
+            }
         }
         incLastKnownScroll = window.scrollY;
         IncarnateReference.incarnateDelay(300).then(result =>{incScrolling=false});

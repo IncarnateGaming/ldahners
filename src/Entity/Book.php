@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -70,6 +72,21 @@ class Book
      * @var \DateTimeInterface|null
      */
     private $updatedAt;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $Excerpt;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Review", mappedBy="Book")
+     */
+    private $Reviews;
+
+    public function __construct()
+    {
+        $this->Reviews = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -174,6 +191,49 @@ class Book
     public function setImageSize(?int $imageSize): self
     {
         $this->imageSize = $imageSize;
+
+        return $this;
+    }
+
+    public function getExcerpt(): ?string
+    {
+        return $this->Excerpt;
+    }
+
+    public function setExcerpt(?string $Excerpt): self
+    {
+        $this->Excerpt = $Excerpt;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Review[]
+     */
+    public function getReviews(): Collection
+    {
+        return $this->Reviews;
+    }
+
+    public function addReview(Review $review): self
+    {
+        if (!$this->Reviews->contains($review)) {
+            $this->Reviews[] = $review;
+            $review->setBook($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReview(Review $review): self
+    {
+        if ($this->Reviews->contains($review)) {
+            $this->Reviews->removeElement($review);
+            // set the owning side to null (unless already changed)
+            if ($review->getBook() === $this) {
+                $review->setBook(null);
+            }
+        }
 
         return $this;
     }

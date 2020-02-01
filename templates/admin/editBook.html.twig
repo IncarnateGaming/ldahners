@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Book{% endblock %}
+{% block title %}Edit Book{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('/style/Form.css') }}">
@@ -9,7 +9,7 @@
 {% block body %}
 
     {{ include('admin/_form_book.html.twig',{
-        title_text: 'New Book',
-        submit_text: 'Create New Book!'
+        title_text: 'Edit Book',
+        submit_text: 'Update!'
     }) }}
 {% endblock %}

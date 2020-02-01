@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}New Merchandise{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('/style/Form.css') }}">
@@ -8,9 +8,8 @@
 
 {% block body %}
 
-    {{ form_start(merchandiseForm) }}
-    <h2>New Merchandise</h2>
-        {{ form_widget(merchandiseForm) }}
-    <button class="btn my-2">Create Merchandise</button>
-    {{ form_end(merchandiseForm) }}
+    {{ include('admin/_form_merchandise.html.twig',{
+        title_text: 'New Merchandise',
+        submit_text: 'Create Merchandise!'
+    }) }}
 {% endblock %}

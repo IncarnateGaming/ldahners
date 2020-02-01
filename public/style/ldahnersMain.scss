@@ -20,6 +20,10 @@ html body{
 .inc-flex-grow{
   flex: 1;
 }
+.inc-row{
+  display:flex;
+  flex-wrap:wrap;
+}
 
 //Nudges
 .inc-nudge-l1{
@@ -42,11 +46,15 @@ nav.inc-sticky-header{
   width:100%;
   overflow-y:scroll;
   overflow-x:hidden;
+  max-height:100vh;
   -ms-overflow-style: none;
   padding: 0.5rem;
 }
 nav.inc-sticky-header::-webkit-scrollbar {
   display: none;
+}
+.hideNav nav.navbar{
+  display:none;
 }
 .inc-body{
   padding-top:3.4rem;
@@ -107,6 +115,9 @@ footer.page-footer{
   nav.inc-sticky-header{
     width:14rem;
     height:100vh;
+  }
+  .hideNav nav.navbar{
+    display:block;
   }
   nav.inc-sticky-header div.collapse{
     display:block;
@@ -170,9 +181,9 @@ footer.page-footer{
     max-width: 49%;
     order:unset;
   }
-}
-.inc-left-pane{
-  margin-right:2%;
+  .inc-left-pane{
+    margin-right:2%;
+  }
 }
 @import '../bootstrap-4.0.0/scss/bootstrap.scss';
 a {
