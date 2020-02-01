@@ -17,7 +17,7 @@
             <p>{{ serial.description }}</p>
             <div class="inc-flex-orientation">
                 <div class="books d-flex flex-wrap">
-                    {% for book in serial.books %}
+                    {% for book in serial.books|sort((a, b) => a.OrderInSeries <=> b.OrderInSeries) %}
                         <div class="inc-book-image">
                             <a href="{{ book.AmazonLink }}">
                                 <img src="{{ vich_uploader_asset(book,'imageFile') }}">
