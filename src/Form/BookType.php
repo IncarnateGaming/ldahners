@@ -24,6 +24,7 @@ class BookType extends AbstractType
                 'class'=>Series::class,
                 'choice_label'=>'name',
             ])
+            ->add('Excerpt')
         ;
     }
 
