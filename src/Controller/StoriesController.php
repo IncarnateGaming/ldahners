@@ -14,7 +14,7 @@ class StoriesController extends AbstractController
      */
     public function index(EntityManagerInterface $em)
     {
-        $series = $em->getRepository(Series::class)->findAll();
+        $series = $em->getRepository(Series::class)->findAllSortedPriority();
         return $this->render('stories/books.html.twig', [
             'controller_name' => 'StoriesController',
             'series' => $series,
