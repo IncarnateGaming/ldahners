@@ -157,8 +157,6 @@ class AdminController extends AbstractController
             $em->flush();
             $this->addFlash('success','Book Edited!');
             return $this->redirectToRoute('app_admin_list_books');
-        }else if($form->isSubmitted() && !$form->isValid()){
-            var_dump($form);die;
         }
         return $this->render('admin/editBook.html.twig', [
             'bookForm' => $form->createView(),
