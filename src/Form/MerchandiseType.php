@@ -17,7 +17,9 @@ class MerchandiseType extends AbstractType
         $builder
             ->add('Name')
             ->add('Description')
-            ->add('imageFile',VichImageType::class)
+            ->add('imageFile',VichImageType::class,[
+                'required'=>false,
+            ])
             ->add('Link')
             ->add('Series',EntityType::class,[
                 'class'=>Series::class,

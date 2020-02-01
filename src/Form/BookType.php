@@ -18,7 +18,9 @@ class BookType extends AbstractType
             ->add('Name')
             ->add('OrderInSeries')
             ->add('Description')
-            ->add('imageFile',VichImageType::class)
+            ->add('imageFile',VichImageType::class,[
+                'required'=>false,
+            ])
             ->add('AmazonLink')
             ->add('Series',EntityType::class,[
                 'class'=>Series::class,
