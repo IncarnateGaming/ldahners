@@ -79,7 +79,6 @@ class AdminController extends AbstractController
             $this->addFlash('success','New Series is added!');
             return $this->redirectToRoute('app_admin_new_book');
         }
-        $form->handleRequest($request);
         return $this->render('admin/newSeries.html.twig', [
             'seriesForm' => $form->createView(),
         ]);
@@ -107,7 +106,6 @@ class AdminController extends AbstractController
             $this->addFlash('success',$series->getName().' has been edited!');
             return $this->redirectToRoute('app_admin_list_series');
         }
-        $form->handleRequest($request);
         return $this->render('admin/editSerial.html.twig', [
             'seriesForm' => $form->createView(),
         ]);
@@ -134,7 +132,6 @@ class AdminController extends AbstractController
             $this->addFlash('success','New Book is added!');
             return $this->redirectToRoute('app_stories');
         }
-        $form->handleRequest($request);
         return $this->render('admin/newBook.html.twig', [
             'bookForm' => $form->createView(),
         ]);
@@ -161,7 +158,6 @@ class AdminController extends AbstractController
             $this->addFlash('success','Book Edited!');
             return $this->redirectToRoute('app_admin_list_books');
         }
-        $form->handleRequest($request);
         return $this->render('admin/editBook.html.twig', [
             'bookForm' => $form->createView(),
         ]);
@@ -188,7 +184,6 @@ class AdminController extends AbstractController
             $this->addFlash('success','New Merchandise is added!');
             return $this->redirectToRoute('app_stories');
         }
-        $form->handleRequest($request);
         return $this->render('admin/newMerchandise.html.twig', [
             'merchandiseForm' => $form->createView(),
         ]);
@@ -215,7 +210,6 @@ class AdminController extends AbstractController
             $this->addFlash('success','Merchandise edited!');
             return $this->redirectToRoute('app_admin_list_merchandise');
         }
-        $form->handleRequest($request);
         return $this->render('admin/editMerchandise.html.twig', [
             'merchandiseForm' => $form->createView(),
         ]);
@@ -242,7 +236,6 @@ class AdminController extends AbstractController
             $this->addFlash('success','New Review is added!');
             return $this->redirectToRoute('app_admin_list_review');
         }
-        $form->handleRequest($request);
         return $this->render('admin/newReview.html.twig', [
             'reviewForm' => $form->createView(),
         ]);
@@ -269,7 +262,6 @@ class AdminController extends AbstractController
             $this->addFlash('success','New Review is added!');
             return $this->redirectToRoute('app_admin_list_review');
         }
-        $form->handleRequest($request);
         return $this->render('admin/editReview.html.twig', [
             'reviewForm' => $form->createView(),
         ]);
