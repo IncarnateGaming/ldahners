@@ -23,6 +23,7 @@ class AppExtension extends AbstractExtension
             // Reference: https://twig.symfony.com/doc/2.x/advanced.html#automatic-escaping
             new TwigFilter('index_stripper', [$this, 'indexStripper']),
             new TwigFilter('email_space_sanitizer', [$this, 'emailSpaceSanitizer']),
+            new TwigFilter('change_return_to_break',[$this, 'addBreaks']),
         ];
     }
     public function emailSpaceSanitizer(string $string):string{
@@ -30,6 +31,13 @@ class AppExtension extends AbstractExtension
     }
     public function indexStripper($value){
         return str_replace('/index.php','',$value);
+    }
+    public function addBreaks($value){
+        $value = strip_tags($value);
+        $value = str_replace("\r\n","<br/>",$value);
+        $value = str_replace("\r","<br/>",$value);
+        $value = str_replace("\n","<br/>",$value);
+        return $value;
     }
 
 //    public function getFilters(): array

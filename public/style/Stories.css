@@ -1,5 +1,6 @@
 .inc-book-image {
   width: 10rem;
+  margin: 1rem;
 }
 .inc-book-image img {
   max-width: 100%;

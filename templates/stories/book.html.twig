@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Books{% endblock %}
+{% block body %}
+    <h2>{{ book.name }} (#{{ book.orderInSeries }} in {{ book.series.name }})</h2>
+    <a href="{{ book.AmazonLink }}">
+        <img src="{{ vich_uploader_asset(book,'imageFile') }}" class="w-25 float-left mr-1">
+    </a>
+    <p>{{ book.description|change_return_to_break|raw }}</p>
+    {% if book.reviews|length > 0 %}
+        <h3>Featured Reviews</h3>
+    {% endif %}
+    {% for review in book.reviews %}
+    <h4><a href="{{ review.hyperlink }}">{{ review.name }}</a></h4>
+    <p>{{ review.review|change_return_to_break|raw }}</p>
+    {% endfor %}
+{% endblock %}

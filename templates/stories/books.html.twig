@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Stories{% endblock %}
+{% block title %}Books{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
@@ -9,7 +9,7 @@
 {% block body %}
     <h2>Writing science fiction turns out to be a lot of fun!</h2>
     <h3>Below are the covers of all of my books</h3>
-    <p>(Click on a cover for more information)</p>
+    <p>(Click on a cover to go to the store or the about button for more information)</p>
     <div class="d-flex flex-column">
     {% for serial in series %}
         <div class="d=flex flex-column">
@@ -22,14 +22,19 @@
                             <a href="{{ book.AmazonLink }}">
                                 <img src="{{ vich_uploader_asset(book,'imageFile') }}">
                             </a>
+                            <a href="{{ path('app_story',{'id':book.id}) }}">
+                                <button class="btn inc-bg-ldahners7 mx-auto d-block mt-2">About</button>
+                            </a>
                         </div>
                     {% endfor %}
                 </div>
                 <div class="merchandise d-flex flex-wrap">
                     {% for merchandise in serial.merchandise %}
-                        <div class="inc-book-image">
-                            <img src="{{ vich_uploader_asset(merchandise,'imageFile') }}">
-                        </div>
+                        <a href="{{ merchandise.link }}">
+                            <div class="inc-book-image">
+                                <img src="{{ vich_uploader_asset(merchandise,'imageFile') }}">
+                            </div>
+                        </a>
                     {% endfor %}
                 </div>
             </div>
