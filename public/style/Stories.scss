@@ -5,3 +5,21 @@
     max-width:100%;
   }
 }
+.merchandise{
+  display:flex;
+  flex-direction: column;
+  .merch-item{
+    flex:0 0 auto;
+    display: flex;
+    flex-direction: column;
+    h4{
+      flex: 0 0 auto;
+    }
+    p{
+      flex: 0 0 auto;
+    }
+    a{
+      flex: 1;
+    }
+  }
+}

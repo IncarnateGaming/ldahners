@@ -28,14 +28,19 @@
                         </div>
                     {% endfor %}
                 </div>
-                <div class="merchandise d-flex flex-wrap">
+                <div class="merchandise">
                     {% for merchandise in serial.merchandise %}
-                        <a href="{{ merchandise.link }}">
-                            <div class="inc-book-image">
-                                <img src="{{ vich_uploader_asset(merchandise,'imageFile') }}">
-                            </div>
-                        </a>
+                        <div class="merch-item">
+                            <h4>{{ merchandise.name }}</h4>
+                            <p>{{ merchandise.description }}</p>
+                            <a href="{{ merchandise.link }}">
+                                <div class="inc-book-image">
+                                    <img src="{{ vich_uploader_asset(merchandise,'imageFile') }}">
+                                </div>
+                            </a>
+                        </div>
                     {% endfor %}
+                    <div class="inc-flex-grow"></div>
                 </div>
             </div>
         </div>
