@@ -32,6 +32,11 @@
                         {{ message }}
                     </div>
                 {% endfor %}
+                {% for message in app.flashes('failure') %}
+                    <div class="alert alert-danger">
+                        {{ message }}
+                    </div>
+                {% endfor %}
                 {% block body_indentation %}
                     <div class="inc-indentation mt-2">
                         {% block body %}{% endblock %}
