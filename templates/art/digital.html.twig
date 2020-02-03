@@ -71,6 +71,7 @@
 {% endblock %}
 {% block javascripts %}
     {{ parent() }}
+    <script src="{{asset('packs/js/incarnateSwipeHooks.js')}}"></script>
     <script src="{{asset('packs/js/galleryCarousel.js')}}"></script>
     <script>
         const incarnateGalleryCarousel = new IncarnateGalleryCarousel('artwork','piece-of-art');

@@ -40,6 +40,9 @@ html body{
 .inc-closing-logo{
   display:none;
 }
+.inc-nav-final-buttons{
+  display:none;
+}
 nav.inc-sticky-header{
   position:fixed;
   top:0;
@@ -127,6 +130,9 @@ footer.page-footer{
   }
   .inc-nav-flex-holder{
     flex: 0 0 14rem;
+  }
+  .inc-nav-final-buttons{
+    display: block;
   }
   .inc-body{
     flex: 1;

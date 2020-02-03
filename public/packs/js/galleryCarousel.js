@@ -70,12 +70,22 @@ class IncarnateGalleryCarousel{
         // Need to remove "data-ride" from the carousel creation to use
         // $('.carousel').carousel({interval:interval});
         document.getElementsByTagName('html')[0].classList.add('carousel-active');
+        IncarnateHooks.on('swipeLeft',IncarnateGalleryCarousel.next);
+        IncarnateHooks.on('swipeRight',IncarnateGalleryCarousel.previous);
     }
     static closeCarousel(ev){
         const carousel = IncarnateReference.getClosestClass(ev.target,'carousel');
         carousel.remove();
         document.getElementsByTagName('html')[0].classList.remove('carousel-active');
         window.scroll(0,IncarnateGalleryCarousel.currentY);
+        IncarnateHooks.on['swipeLeft']=[];
+        IncarnateHooks.on['swipeRight']=[];
+    }
+    static next(){
+        $('.carousel').carousel('next');
+    }
+    static previous(){
+        $('.carousel').carousel('prev');
     }
 }
 IncarnateGalleryCarousel.currentY = 0;
