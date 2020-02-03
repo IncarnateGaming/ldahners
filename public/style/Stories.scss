@@ -8,6 +8,8 @@
 .merchandise{
   display:flex;
   flex-direction: column;
+  //align-self: flex-end;
+  margin-left:auto;
   .merch-item{
     flex:0 0 auto;
     display: flex;

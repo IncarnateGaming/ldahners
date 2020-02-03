@@ -32,7 +32,7 @@
                     {% for merchandise in serial.merchandise %}
                         <div class="merch-item">
                             <h4>{{ merchandise.name }}</h4>
-                            <p>{{ merchandise.description }}</p>
+                            <p>{{ merchandise.description|change_return_to_break|raw }}</p>
                             <a href="{{ merchandise.link }}">
                                 <div class="inc-book-image">
                                     <img src="{{ vich_uploader_asset(merchandise,'imageFile') }}">

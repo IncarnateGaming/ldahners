@@ -9,6 +9,7 @@
 .merchandise {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
 }
 .merchandise .merch-item {
   flex: 0 0 auto;
