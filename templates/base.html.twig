@@ -9,12 +9,12 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('/style/ldahnersMain.css') }}">
         {% endblock %}
-        <script src="{{ asset('packs/js/cookies.js') }}"></script>
-        <script>
-            var incarnateDomain = 'ldahners.incarnategamingllc.com';
-        </script>
+{#        <script src="{{ asset('packs/js/cookies.js') }}"></script>#}
+{#        <script>#}
+{#            var incarnateDomain = 'ldahners.incarnategamingllc.com';#}
+{#        </script>#}
         <script src="{{ asset('packs/js/hooks.js') }}"></script>
-        <script src="{{asset('packs/js/incarnateReference.js')}}"></script>
+        <script src="{{asset('packs/js/ldahnersIncarnateReference.js')}}"></script>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -137,23 +137,23 @@
             {% endif %}
         </nav>
         {% block javascripts %}
-            <script>
-                var IncarnateAnalyticsTag = 'UA-155417623-1';
-            </script>
-            <script src="{{asset('packs/js/navFunctions.js')}}"></script>
+{#            <script>#}
+{#                var IncarnateAnalyticsTag = 'UA-155417623-1';#}
+{#            </script>#}
+            <script src="{{asset('packs/js/ldahnersNavFunctions.js')}}"></script>
             <script src="{{ asset('packs/js/orientation.js') }}"></script>
-            <script src="{{ asset('packs/js/analytics.js') }}"></script>
+{#            <script src="{{ asset('packs/js/analytics.js') }}"></script>#}
             <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 {#            {% block policyAccept %}<script src="{{ asset('packs/js/policyAccept.js') }}"></script>{% endblock %}#}
-            <script src="{{ asset('packs/js/colorTryer.js') }}"></script>
-            <script>
-                // IncarnateColorTryer.build('inc-nav-body','color','Page Text Color');
-                // IncarnateColorTryer.build('inc-nav-body','background-color','Page Background Color');
-                // IncarnateColorTryer.build('inc-banners','background-color','Header Footer Background Color');
-                // IncarnateColorTryer.build('inc-button-color','background-color','Button Color');
-            </script>
+{#            <script src="{{ asset('packs/js/colorTryer.js') }}"></script>#}
+{#            <script>#}
+{#                IncarnateColorTryer.build('inc-nav-body','color','Page Text Color');#}
+{#                IncarnateColorTryer.build('inc-nav-body','background-color','Page Background Color');#}
+{#                IncarnateColorTryer.build('inc-banners','background-color','Header Footer Background Color');#}
+{#                IncarnateColorTryer.build('inc-button-color','background-color','Button Color');#}
+{#            </script>#}
         {% endblock %}
     </body>
 </html>

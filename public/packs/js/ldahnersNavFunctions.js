@@ -1,6 +1,6 @@
 let incScrolling = false;
 let incLastKnownScroll = 0;
-class NavFunctions{
+class LdahnersNavFunctions{
     static hideTop(){
         document.getElementById('topButton').style.display='none';
     }
@@ -22,18 +22,18 @@ class NavFunctions{
                 document.getElementById('inc-top-html').classList.remove('hideNav');
             }
             if (window.scrollY > 500) {
-                NavFunctions.showTop();
+                LdahnersNavFunctions.showTop();
             } else {
-                NavFunctions.hideTop();
+                LdahnersNavFunctions.hideTop();
             }
         }
         incLastKnownScroll = window.scrollY;
-        IncarnateReference.incarnateDelay(300).then(result =>{incScrolling=false});
+        LdahnersIncarnateReference.incarnateDelay(300).then(result =>{incScrolling=false});
     }
     static toTop(){
         window.scrollTo(0,0);
     }
 }
-window.addEventListener('scroll',NavFunctions.changeNavOnScroll);
-document.getElementById('topButton').addEventListener('click',NavFunctions.toTop);
-NavFunctions.hideTop();
+window.addEventListener('scroll',LdahnersNavFunctions.changeNavOnScroll);
+document.getElementById('topButton').addEventListener('click',LdahnersNavFunctions.toTop);
+LdahnersNavFunctions.hideTop();

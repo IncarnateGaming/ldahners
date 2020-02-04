@@ -298,7 +298,7 @@ class AdminController extends AbstractController
      * @Route("/admin/list/seriesReview", name="app_admin_list_seriesReview")
      */
     public function listSeriesReview(EntityManagerInterface $em){
-        $review = $em->getRepository(Review::class)->findAllSortedPriority();
+        $review = $em->getRepository(SeriesReview::class)->findAllSortedPriority();
         return $this->render('admin/listSeriesReview.html.twig', [
             'review' => $review,
         ]);

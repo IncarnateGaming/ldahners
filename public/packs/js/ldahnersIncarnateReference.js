@@ -1,4 +1,4 @@
-class IncarnateReference{
+class LdahnersIncarnateReference{
     static incarnateDelay(ms){
         return new Promise(resolve => setTimeout(resolve, ms));
     }

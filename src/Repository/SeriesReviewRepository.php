@@ -18,6 +18,9 @@ class SeriesReviewRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, SeriesReview::class);
     }
+    public function findAllSortedPriority(){
+        return $this->findBy(array(),array('Series'=>'ASC'));
+    }
 
     // /**
     //  * @return SeriesReview[] Returns an array of SeriesReview objects

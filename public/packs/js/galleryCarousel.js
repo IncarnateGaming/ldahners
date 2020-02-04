@@ -52,7 +52,7 @@ class IncarnateGalleryCarousel{
     static deploy(ev,incarnateGalleryCarousel,interval){
         interval = interval || 13000;
         IncarnateGalleryCarousel.currentY = window.scrollY;
-        const item = IncarnateReference.getClosestClass(ev.target,incarnateGalleryCarousel.itemClass);
+        const item = LdahnersIncarnateReference.getClosestClass(ev.target,incarnateGalleryCarousel.itemClass);
         const dataCount = item.getAttribute('data-count');
         const newCarousel = incarnateGalleryCarousel.carousel.cloneNode(true);
         newCarousel.setAttribute('data-interval',interval);
@@ -74,7 +74,7 @@ class IncarnateGalleryCarousel{
         IncarnateHooks.on('swipeRight',IncarnateGalleryCarousel.previous);
     }
     static closeCarousel(ev){
-        const carousel = IncarnateReference.getClosestClass(ev.target,'carousel');
+        const carousel = LdahnersIncarnateReference.getClosestClass(ev.target,'carousel');
         carousel.remove();
         document.getElementsByTagName('html')[0].classList.remove('carousel-active');
         window.scroll(0,IncarnateGalleryCarousel.currentY);

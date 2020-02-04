@@ -9,6 +9,15 @@
     <div class="d=flex flex-column">
         <h4>{{ serial.name }}</h4>
         <p>{{ serial.description }}</p>
+        <div class="featured-reviews">
+            <h5>Featured Reviews</h5>
+            {% for review in serial.seriesReviews %}
+                <div>
+                    <h3><a href="{{ review.hyperlink }}">{{ review.name }}</a></h3>
+                    <p>{{ review.review|change_return_to_break|raw }}</p>
+                </div>
+            {% endfor %}
+        </div>
         <div class="inc-flex-orientation">
             <div class="books d-flex flex-wrap">
                 {% for book in serial.books|sort((a, b) => a.OrderInSeries <=> b.OrderInSeries) %}
@@ -37,13 +46,5 @@
                 <div class="inc-flex-grow"></div>
             </div>
         </div>
-    </div>
-    <div class="featured-reviews">
-        {% for review in serial.seriesReviews %}
-            <div>
-                <h3><a href="{{ review.hyperlink }}">{{ review.name }}</a></h3>
-                <p>{{ review.review|change_return_to_break|raw }}</p>
-            </div>
-        {% endfor %}
     </div>
 {% endblock %}

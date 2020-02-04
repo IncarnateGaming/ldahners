@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}List Featured Reviews{% endblock %}
+{% block title %}List Featured Series Reviews{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('/style/Table.css') }}">
@@ -9,7 +9,7 @@
 
 {% block body %}
 
-    <h2>Current Featured Reviews</h2>
+    <h2>Current Featured Series Reviews</h2>
     <table class="inc-table inc-table-striped">
         <tr>
             <th>Edit Link</th>
@@ -24,7 +24,7 @@
                 <td><a href="{{ path('app_admin_edit_review',{
                         id: item.id
                     }) }}"><button class="btn-success">Edit</button></a></td>
-                <td>{{ item.Book.name }}</td>
+                <td>{{ item.Series.name }}</td>
                 <td>{{ item.Name }}</td>
                 <td><div class="td">{{ item.Review }}</div></td>
                 <td><div class="td"><a href="{{ item.Hyperlink }}">{{ item.Hyperlink }}</a></div></td>

@@ -24,7 +24,7 @@ class IncarnateAutoplay{
                 if(source === incarnateAutoplay.items[a].getElementsByTagName('source')[0].getAttribute('src')){
                     const nextElement = a < itemLen-1 ? a+1 : 0;
                     incarnateAutoplay.items[nextElement].play();
-                    await IncarnateReference.incarnateDelay(100);
+                    await LdahnersIncarnateReference.incarnateDelay(100);
                     incarnateAutoplay.items[a].pause();
                     break;
                 }
