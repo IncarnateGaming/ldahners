@@ -21,14 +21,14 @@
         </tr>
         {% for item in review %}
             <tr>
-                <td><a href="{{ path('app_admin_edit_review',{
+                <td><a href="{{ path('app_admin_edit_seriesReview',{
                         id: item.id
                     }) }}"><button class="btn-success">Edit</button></a></td>
                 <td>{{ item.Series.name }}</td>
                 <td>{{ item.Name }}</td>
                 <td><div class="td">{{ item.Review }}</div></td>
                 <td><div class="td"><a href="{{ item.Hyperlink }}">{{ item.Hyperlink }}</a></div></td>
-                <td><button class="btn-warning delete-button" data-delete="{{ path('app_admin_delete_review',{
+                <td><button class="btn-warning delete-button" data-delete="{{ path('app_admin_delete_seriesReview',{
                         id: item.id
                     }) }}" data-label="{{ item.Name }}">Delete</button></td>
             </tr>
