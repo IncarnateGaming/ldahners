@@ -6,11 +6,13 @@ use App\Entity\Book;
 use App\Entity\Merchandise;
 use App\Entity\Review;
 use App\Entity\Series;
+use App\Entity\SeriesReview;
 use App\Entity\User;
 use App\Form\BookType;
 use App\Form\MerchandiseType;
 use App\Form\RegistrationFormType;
 use App\Form\ReviewType;
+use App\Form\SeriesReviewType;
 use App\Form\SeriesType;
 use App\Security\LoginFormAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
@@ -233,7 +235,7 @@ class AdminController extends AbstractController
             $review = $form->getData();
             $em->persist($review);
             $em->flush();
-            $this->addFlash('success','New Review is added!');
+            $this->addFlash('success','New Book Review is added!');
             return $this->redirectToRoute('app_admin_list_review');
         }
         return $this->render('admin/newReview.html.twig', [
@@ -259,7 +261,7 @@ class AdminController extends AbstractController
             $review = $form->getData();
             $em->persist($review);
             $em->flush();
-            $this->addFlash('success','New Review is added!');
+            $this->addFlash('success','Book Review Edited!');
             return $this->redirectToRoute('app_admin_list_review');
         }
         return $this->render('admin/editReview.html.twig', [
@@ -274,5 +276,57 @@ class AdminController extends AbstractController
         $em->remove($review);
         $em->flush();
         return $this->redirectToRoute('app_admin_list_review');
+    }
+    /**
+     * @Route("/admin/new/seriesReview", name="app_admin_new_seriesReview")
+     */
+    public function newSeriesReview(EntityManagerInterface $em ,Request $request){
+        $form = $this->createForm(SeriesReviewType::class);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $review = $form->getData();
+            $em->persist($review);
+            $em->flush();
+            $this->addFlash('success','New Series Review is added!');
+            return $this->redirectToRoute('app_admin_list_seriesReview');
+        }
+        return $this->render('admin/newSeriesReview.html.twig', [
+            'seriesReviewForm' => $form->createView(),
+        ]);
+    }
+    /**
+     * @Route("/admin/list/seriesReview", name="app_admin_list_seriesReview")
+     */
+    public function listSeriesReview(EntityManagerInterface $em){
+        $review = $em->getRepository(Review::class)->findAllSortedPriority();
+        return $this->render('admin/listSeriesReview.html.twig', [
+            'review' => $review,
+        ]);
+    }
+    /**
+     * @Route("/admin/edit/seriesReview/{id}", name="app_admin_edit_seriesReview")
+     */
+    public function editSeriesReview(EntityManagerInterface $em ,Request $request, SeriesReview $seriesReview){
+        $form = $this->createForm(ReviewType::class,$seriesReview);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $seriesReview = $form->getData();
+            $em->persist($seriesReview);
+            $em->flush();
+            $this->addFlash('success','New Series Review is added!');
+            return $this->redirectToRoute('app_admin_list_seriesReview');
+        }
+        return $this->render('admin/editSeriesReview.html.twig', [
+            'seriesReviewForm' => $form->createView(),
+        ]);
+    }
+    /**
+     * @Route("/admin/delete/seriesReview/{id}", name="app_admin_delete_seriesReview")
+     */
+    public function deleteSeriesReview(EntityManagerInterface $em, $id){
+        $seriesReview = $em->getRepository(SeriesReview::class)->find($id);
+        $em->remove($seriesReview);
+        $em->flush();
+        return $this->redirectToRoute('app_admin_list_seriesReview');
     }
 }

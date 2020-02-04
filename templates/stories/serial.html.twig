@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ serial.name }}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('/style/Stories.css') }}">
+{% endblock %}
+{% block body %}
+    <div class="d=flex flex-column">
+        <h4>{{ serial.name }}</h4>
+        <p>{{ serial.description }}</p>
+        <div class="inc-flex-orientation">
+            <div class="books d-flex flex-wrap">
+                {% for book in serial.books|sort((a, b) => a.OrderInSeries <=> b.OrderInSeries) %}
+                    <div class="inc-book-image">
+                        <a href="{{ book.AmazonLink }}">
+                            <img src="{{ vich_uploader_asset(book,'imageFile') }}">
+                        </a>
+                        <a href="{{ path('app_story',{'id':book.id}) }}">
+                            <button class="btn inc-bg-ldahners7 mx-auto d-block mt-2">About</button>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="merchandise">
+                {% for merchandise in serial.merchandise %}
+                    <div class="merch-item">
+                        <h4>{{ merchandise.name }}</h4>
+                        <p>{{ merchandise.description|change_return_to_break|raw }}</p>
+                        <a href="{{ merchandise.link }}">
+                            <div class="inc-book-image">
+                                <img src="{{ vich_uploader_asset(merchandise,'imageFile') }}">
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+                <div class="inc-flex-grow"></div>
+            </div>
+        </div>
+    </div>
+    <div class="featured-reviews">
+        {% for review in serial.seriesReviews %}
+            <div>
+                <h3><a href="{{ review.hyperlink }}">{{ review.name }}</a></h3>
+                <p>{{ review.review|change_return_to_break|raw }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

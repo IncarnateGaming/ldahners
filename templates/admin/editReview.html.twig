@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Review{% endblock %}
+{% block title %}Edit Book Review{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('/style/Form.css') }}">
@@ -9,7 +9,7 @@
 {% block body %}
 
     {{ include('admin/_form_review.html.twig',{
-        title_text: 'Edit Review',
-        submit_text: 'Update!'
+        title_text: 'Edit Book Review',
+        submit_text: 'Update Book Review!'
     }) }}
 {% endblock %}

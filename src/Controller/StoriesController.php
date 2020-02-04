@@ -22,13 +22,23 @@ class StoriesController extends AbstractController
         ]);
     }
     /**
-     * @Route("/stories/{id}", name="app_story")
+     * @Route("/stories/book/{id}", name="app_story")
      */
     public function storyPage(EntityManagerInterface $em,$id)
     {
         $book = $em->getRepository(Book::class)->find($id);
         return $this->render('stories/book.html.twig', [
             'book' => $book,
+        ]);
+    }
+    /**
+     * @Route("/stories/series/{id}", name="app_serial")
+     */
+    public function seriesPage(EntityManagerInterface $em,$id)
+    {
+        $serial = $em->getRepository(Series::class)->find($id);
+        return $this->render('stories/serial.html.twig', [
+            'serial' => $serial,
         ]);
     }
 }

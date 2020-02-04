@@ -45,10 +45,16 @@ class Series
      */
     private $SeriesPriority;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\SeriesReview", mappedBy="Series")
+     */
+    private $seriesReviews;
+
     public function __construct()
     {
         $this->books = new ArrayCollection();
         $this->Merchandise = new ArrayCollection();
+        $this->seriesReviews = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -150,6 +156,37 @@ class Series
     public function setSeriesPriority(int $SeriesPriority): self
     {
         $this->SeriesPriority = $SeriesPriority;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|SeriesReview[]
+     */
+    public function getSeriesReviews(): Collection
+    {
+        return $this->seriesReviews;
+    }
+
+    public function addSeriesReview(SeriesReview $seriesReview): self
+    {
+        if (!$this->seriesReviews->contains($seriesReview)) {
+            $this->seriesReviews[] = $seriesReview;
+            $seriesReview->setSeries($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSeriesReview(SeriesReview $seriesReview): self
+    {
+        if ($this->seriesReviews->contains($seriesReview)) {
+            $this->seriesReviews->removeElement($seriesReview);
+            // set the owning side to null (unless already changed)
+            if ($seriesReview->getSeries() === $this) {
+                $seriesReview->setSeries(null);
+            }
+        }
 
         return $this;
     }
