@@ -307,7 +307,7 @@ class AdminController extends AbstractController
      * @Route("/admin/edit/seriesReview/{id}", name="app_admin_edit_seriesReview")
      */
     public function editSeriesReview(EntityManagerInterface $em ,Request $request, SeriesReview $seriesReview){
-        $form = $this->createForm(ReviewType::class,$seriesReview);
+        $form = $this->createForm(SeriesReviewType::class,$seriesReview);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $seriesReview = $form->getData();
