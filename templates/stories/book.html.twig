@@ -3,7 +3,7 @@
 {% block title %}Books{% endblock %}
 {% block body %}
     <h2>{{ book.name }} (#{{ book.orderInSeries }} in {{ book.series.name }})</h2>
-    <a href="{{ book.AmazonLink }}">
+    <a href="{{ url(book.AmazonLink) }}">
         <img src="{{ vich_uploader_asset(book,'imageFile') }}" class="w-25 float-left mr-1">
     </a>
     <p>{{ book.description|change_return_to_break|raw }}</p>
