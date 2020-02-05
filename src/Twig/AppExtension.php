@@ -30,7 +30,7 @@ class AppExtension extends AbstractExtension
         return str_replace(' ','%20',$string);
     }
     public function indexStripper($value){
-        return str_replace('/index.php','',$value);
+        return str_replace('','',$value);
     }
     public function addBreaks($value){
         $value = strip_tags($value);
