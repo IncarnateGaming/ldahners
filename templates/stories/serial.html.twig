@@ -13,7 +13,7 @@
             <h5>Featured Reviews</h5>
             {% for review in serial.seriesReviews %}
                 <div>
-                    <h3><a href="{{ url(review.hyperlink) }}">{{ review.name }}</a></h3>
+                    <h3><a href="{{ review.hyperlink }}">{{ review.name }}</a></h3>
                     <p>{{ review.review|change_return_to_break|raw }}</p>
                 </div>
             {% endfor %}
