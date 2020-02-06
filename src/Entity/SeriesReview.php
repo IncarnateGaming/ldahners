@@ -17,12 +17,12 @@ class SeriesReview
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=191)
+     * @ORM\Column(type="string", length=255)
      */
     private $Name;
 
     /**
-     * @ORM\Column(type="string", length=191)
+     * @ORM\Column(type="string", length=255)
      */
     private $Hyperlink;
 

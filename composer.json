@@ -20,7 +20,6 @@
         "vich/uploader-bundle": "^1.8"
     },
     "require-dev": {
-        "symfony/maker-bundle": "^1.14"
     },
     "config": {
         "preferred-install": {
