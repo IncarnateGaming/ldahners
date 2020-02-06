@@ -26,8 +26,8 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
 
 /**
+ * @IsGranted("ROLE_ADMIN")
  */
-//* @IsGranted("ROLE_ADMIN")
 class AdminController extends AbstractController
 {
     /**
