@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin Index{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <h2>Admin Functions</h2>
+    <div class="d-flex flex-wrap">
+        <div class="m-2 inc-button-group d-flex flex-column">
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_series')|index_stripper }}'">New Series</button>
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_series')|index_stripper }}'">List Series</button>
+        </div>
+        <div class="m-2 inc-button-group d-flex flex-column">
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_book')|index_stripper }}'">New Books</button>
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_books')|index_stripper }}'">List Books</button>
+        </div>
+        <div class="m-2 inc-button-group d-flex flex-column">
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_merchandise')|index_stripper }}'">New Merchandise</button>
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_merchandise')|index_stripper }}'">List Merchandise</button>
+        </div>
+        <div class="m-2 inc-button-group d-flex flex-column">
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_review')|index_stripper }}'">New Book Review</button>
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_review')|index_stripper }}'">List Book Review</button>
+        </div>
+        <div class="m-2 inc-button-group d-flex flex-column">
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_seriesReview')|index_stripper }}'">New Series Review</button>
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_seriesReview')|index_stripper }}'">List Series Review</button>
+        </div>
+        <div class="m-2 inc-button-group d-flex flex-column">
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_physicalArt')|index_stripper }}'">New Physical Art</button>
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_physicalArt')|index_stripper }}'">List Physical Art</button>
+        </div>
+        <div class="m-2 inc-button-group d-flex flex-column">
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_digitalArt')|index_stripper }}'">New Digital Art</button>
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_digitalArt')|index_stripper }}'">List Digital Art</button>
+        </div>
+        <div class="m-2 inc-button-group d-flex flex-column">
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_insMusic')|index_stripper }}'">New Instrumental Music</button>
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_insMusic')|index_stripper }}'">List Instrumental Video</button>
+        </div>
+        <div class="m-2 inc-button-group d-flex flex-column">
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_insVideo')|index_stripper }}'">New Instrumental Video</button>
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_insVideo')|index_stripper }}'">List Instrumental Video</button>
+        </div>
+        <div class="m-2 inc-button-group d-flex flex-column">
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_vocMusic')|index_stripper }}'">New Vocal Music</button>
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_vocMusic')|index_stripper }}'">List Vocal Music</button>
+        </div>
+        <div class="m-2 inc-button-group d-flex flex-column">
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_vocVideo')|index_stripper }}'">New Vocal Video</button>
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_list_vocVideo')|index_stripper }}'">List Vocal Video</button>
+        </div>
+        <div class="m-2 inc-button-group d-flex flex-column">
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_account_changePassword')|index_stripper }}'">Change Password</button>
+            <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_register')|index_stripper }}'">New Admin Account</button>
+        </div>
+    </div>
+{% endblock %}

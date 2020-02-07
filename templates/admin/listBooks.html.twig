@@ -9,7 +9,9 @@
 
 {% block body %}
 
-    <h2>Current Books</h2>
+    <h2>Current Books
+        <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_book')|index_stripper }}'">New</button>
+    </h2>
     <table class="inc-table inc-table-striped">
         <tr>
             <th>Edit Link</th>

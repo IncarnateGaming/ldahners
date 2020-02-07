@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New {{ label }}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('/style/Form.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    {{ include('admin/_form.html.twig',{
+        title_text: 'New ' ~ label,
+        submit_text: 'Create new ' ~ label ~ '!'
+    }) }}
+{% endblock %}

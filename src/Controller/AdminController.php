@@ -31,6 +31,13 @@ use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
 class AdminController extends AbstractController
 {
     /**
+     * @Route("/admin/index", name="app_admin_index")
+     */
+    public function indexPage(){
+        return $this->render('admin/adminIndex.html.twig', [
+        ]);
+    }
+    /**
      * @Route("/admin/register", name="app_admin_register")
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, LoginFormAuthenticator $authenticator): Response
