@@ -9,6 +9,7 @@ class IncarnateAutoplay{
         this.items = items;
         items.forEach(item=>{
             item.addEventListener('ended',this.endPlay);
+            item.addEventListener('play',this.startPlay);
             item.loop = false;
         });
         const toggles = document.getElementsByClassName(toggleClass);
@@ -16,9 +17,27 @@ class IncarnateAutoplay{
             toggle.addEventListener('click',this.toggleAutoplay);
         })
     }
+    async startPlay(ev){
+        var element = ev.target.getElementsByTagName('source')[0];
+        element.classList.remove('playing');
+        var playing = document.getElementsByClassName('playing');
+        [].forEach.call(playing, item=>{
+            const type = item.getAttribute('type');
+            var player;
+            if(type=='audio/mp3'){
+                player = LdahnersIncarnateReference.getClosestTag(item,'audio')
+            }else if(type=='video/mp4'){
+                player = LdahnersIncarnateReference.getClosestTag(item,'video')
+            }
+            player.pause();
+            item.classList.remove('playing');
+        });
+        element.classList.add('playing');
+    }
     async endPlay(ev){
         if (incarnateAutoplay.autoplay){
-            const source = ev.target.getElementsByTagName('source')[0].getAttribute('src');
+            const element = ev.target.getElementsByTagName('source')[0];
+            const source = element.getAttribute('src');
             const itemLen = incarnateAutoplay.items.length;
             for (var a=0; a<itemLen; a++){
                 if(source === incarnateAutoplay.items[a].getElementsByTagName('source')[0].getAttribute('src')){
