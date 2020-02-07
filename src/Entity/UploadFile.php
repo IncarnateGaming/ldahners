@@ -31,7 +31,7 @@ class UploadFile
     private $name1;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $description1;
 

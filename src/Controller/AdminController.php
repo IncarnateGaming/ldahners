@@ -86,7 +86,7 @@ class AdminController extends AbstractController
             $em->persist($series);
             $em->flush();
             $this->addFlash('success','New Series is added!');
-            return $this->redirectToRoute('app_admin_new_book');
+            return $this->redirectToRoute('app_admin_list_series');
         }
         return $this->render('admin/newSeries.html.twig', [
             'seriesForm' => $form->createView(),
@@ -139,7 +139,7 @@ class AdminController extends AbstractController
             $em->persist($book);
             $em->flush();
             $this->addFlash('success','New Book is added!');
-            return $this->redirectToRoute('app_stories');
+            return $this->redirectToRoute('app_admin_list_books');
         }
         return $this->render('admin/newBook.html.twig', [
             'bookForm' => $form->createView(),
@@ -191,7 +191,7 @@ class AdminController extends AbstractController
             $em->persist($merchandise);
             $em->flush();
             $this->addFlash('success','New Merchandise is added!');
-            return $this->redirectToRoute('app_stories');
+            return $this->redirectToRoute('app_admin_list_merchandise');
         }
         return $this->render('admin/newMerchandise.html.twig', [
             'merchandiseForm' => $form->createView(),

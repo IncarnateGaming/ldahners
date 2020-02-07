@@ -9,63 +9,12 @@
 {#    <div class="inc-bg-black inc-nudge-l1">#}
         <h1 class="inc-text-light ml-4">Digital Art</h1>
         <div class="d-flex flex-row flex-wrap artwork">
-            <div class="piece-of-art" data-count="0">
-                <img src="{{ asset('/assets/art/digital/blue ringed planet and tapering tower 36x11.75 horiz.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="1">
-                <img src="{{ asset('/assets/art/digital/cexplosion.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="2">
-                <img src="{{ asset('/assets/art/digital/Cranes, color boost, palette knifre.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="3">
-                <img src="{{ asset('/assets/art/digital/Fall leaves foggy morning hueboost palette knife then daubs.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="4">
-                <img src="{{ asset('/assets/art/digital/Fishermen paint daubs color boost.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="5">
-                <img src="{{ asset('/assets/art/digital/Four planets,blue white nebula,stars, mountains family -  36x11.75poster horix.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="6">
-                <img src="{{ asset('/assets/art/digital/Four planets,blue white nebula,stars.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="7">
-                <img src="{{ asset('/assets/art/digital/Four planets,red white nebula,stars, mountains family -  36x11.75 poster vert.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="8">
-                <img src="{{ asset('/assets/art/digital/Grand Canyon.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="9">
-                <img src="{{ asset('/assets/art/digital/Landscape with obelisks and ringed planet.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="10">
-                <img src="{{ asset('/assets/art/digital/Myrtle Beach Morning stamp.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="11">
-                <img src="{{ asset('/assets/art/digital/Nevada Highway with snow modified 2.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="12">
-                <img src="{{ asset('/assets/art/digital/One planet three moons, four stars.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="13">
-                <img src="{{ asset('/assets/art/digital/pyramids with man observing.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="14">
-                <img src="{{ asset('/assets/art/digital/red planet on starfield over lake royale lower quality.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="15">
-                <img src="{{ asset('/assets/art/digital/ringed planet over ocean  36x11.75 horiz.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="16">
-                <img src="{{ asset('/assets/art/digital/ringed planet over ocean  36x11.75 vertical.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="17">
-                <img src="{{ asset('/assets/art/digital/ringed planet over ocean Red and Green version 36x11.75 vertical.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
-            <div class="piece-of-art" data-count="18">
-                <img src="{{ asset('/assets/art/digital/Stonehenge with white nebula lq.jpg') }}" class="d-block img-fluid mx-auto">
-            </div>
+            {% for key, art in artwork %}
+                <div class="piece-of-art" data-count="{{ key }}">
+                    <img src="{{ asset(vich_uploader_asset(art,'fileFile')) }}" class="d-block img-fluid mx-auto">
+{#                    <p class="art-caption"><strong>"{{ art.name1 }}"</strong>{% if art.description1 %} - {{ art.description1|change_return_to_break|raw }}{% endif %}</p>#}
+                </div>
+            {% endfor %}
         </div>
 {#    </div>#}
 {% endblock %}
