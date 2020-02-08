@@ -12,7 +12,7 @@
             {% for key, art in artwork %}
                 <div class="piece-of-art" data-count="{{ key }}">
                     <img src="{{ asset(vich_uploader_asset(art,'fileFile')) }}" class="d-block img-fluid mx-auto">
-{#                    <p class="art-caption"><strong>"{{ art.name1 }}"</strong>{% if art.description1 %} - {{ art.description1|change_return_to_break|raw }}{% endif %}</p>#}
+                    <p class="art-caption"><strong>"{{ art.name1 }}"</strong>{% if art.description1 %} - {{ art.description1|change_return_to_break|raw }}{% endif %}</p>
                 </div>
             {% endfor %}
         </div>
