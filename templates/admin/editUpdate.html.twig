@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Update{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('/style/Form.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    {{ include('admin/_form.html.twig',{
+        title_text: 'Edit the Update',
+        submit_text: 'Update the Update!'
+    }) }}
+{% endblock %}

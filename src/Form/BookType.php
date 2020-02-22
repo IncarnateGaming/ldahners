@@ -6,6 +6,7 @@ use App\Entity\Book;
 use App\Entity\Series;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Vich\UploaderBundle\Form\Type\VichImageType;
@@ -21,7 +22,7 @@ class BookType extends AbstractType
             ->add('imageFile',VichImageType::class,[
                 'required'=>false,
             ])
-            ->add('AmazonLink')
+            ->add('AmazonLink', UrlType::class)
             ->add('Series',EntityType::class,[
                 'class'=>Series::class,
                 'choice_label'=>'name',

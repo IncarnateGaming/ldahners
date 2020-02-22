@@ -7,6 +7,7 @@ use App\Entity\Merchandise;
 use App\Entity\Review;
 use App\Entity\Series;
 use App\Entity\SeriesReview;
+use App\Entity\Updates;
 use App\Entity\User;
 use App\Form\BookType;
 use App\Form\MerchandiseType;
@@ -14,6 +15,7 @@ use App\Form\RegistrationFormType;
 use App\Form\ReviewType;
 use App\Form\SeriesReviewType;
 use App\Form\SeriesType;
+use App\Form\UpdatesType;
 use App\Security\LoginFormAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
 use phpDocumentor\Reflection\Types\Integer;
@@ -335,5 +337,57 @@ class AdminController extends AbstractController
         $em->remove($seriesReview);
         $em->flush();
         return $this->redirectToRoute('app_admin_list_seriesReview');
+    }
+    /**
+     * @Route("/admin/new/update", name="app_admin_new_update")
+     */
+    public function newUpdate(EntityManagerInterface $em ,Request $request){
+        $form = $this->createForm(UpdatesType::class);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $review = $form->getData();
+            $em->persist($review);
+            $em->flush();
+            $this->addFlash('success','New Update is added!');
+            return $this->redirectToRoute('app_admin_list_update');
+        }
+        return $this->render('admin/newUpdate.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+    /**
+     * @Route("/admin/list/update", name="app_admin_list_update")
+     */
+    public function listUpdate(EntityManagerInterface $em){
+        $updates = $em->getRepository(Updates::class)->findAllSortedPriority();
+        return $this->render('admin/listUpdates.html.twig', [
+            'updates' => $updates,
+        ]);
+    }
+    /**
+     * @Route("/admin/edit/update/{id}", name="app_admin_edit_update")
+     */
+    public function editUpdate(EntityManagerInterface $em ,Request $request, Updates $updates){
+        $form = $this->createForm(UpdatesType::class,$updates);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $updates = $form->getData();
+            $em->persist($updates);
+            $em->flush();
+            $this->addFlash('success','New update is added!');
+            return $this->redirectToRoute('app_admin_list_update');
+        }
+        return $this->render('admin/editUpdate.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+    /**
+     * @Route("/admin/delete/update/{id}", name="app_admin_delete_update")
+     */
+    public function deleteUpdate(EntityManagerInterface $em, $id){
+        $seriesReview = $em->getRepository(Updates::class)->find($id);
+        $em->remove($seriesReview);
+        $em->flush();
+        return $this->redirectToRoute('app_admin_list_update');
     }
 }

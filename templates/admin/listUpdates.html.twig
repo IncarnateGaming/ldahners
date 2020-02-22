@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}List Updates{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('/style/Table.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <h2>Current Series
+        <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_update')|index_stripper }}'">New</button>
+    </h2>
+    <table class="inc-table inc-table-striped">
+        <tr>
+            <th>Edit Link</th>
+            <th>Book</th>
+            <th>Description</th>
+            <th>Closing</th>
+            <th>Delete Series</th>
+        </tr>
+        {# @var update \App\Entity\Updates #}
+        {% for update in updates %}
+            <tr>
+                <td><a href="{{ path('app_admin_edit_update',{
+                        id: update.id
+                    }) }}"><button class="btn-success">Edit</button></a></td>
+                <td>{% if update.book %}{{ update.book.name }}{% endif %}</td>
+                <td>{{ update.description }}</td>
+                <td>{% if update.closeLink and update.closeDescription %}<a href="{{ update.closeLink }}">{{ update.closeDescription }}</a>{% endif %}</td>
+                <td><button class="btn-warning delete-button" data-delete="{{ path('app_admin_delete_update',{
+                        id: update.id
+                    }) }}" data-label="{% if update.book %}{{ update.book.name }} {% endif %}{{ update.description }}">Delete</button></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{asset('packs/js/deleteButton.js')}}"></script>
+{% endblock %}
+

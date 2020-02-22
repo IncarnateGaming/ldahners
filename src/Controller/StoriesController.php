@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Book;
 use App\Entity\Series;
+use App\Entity\Updates;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,9 +17,11 @@ class StoriesController extends AbstractController
     public function index(EntityManagerInterface $em)
     {
         $series = $em->getRepository(Series::class)->findAllSortedPriority();
+        $updates = $em->getRepository(Updates::class)->findAllSortedPriority();
         return $this->render('stories/books.html.twig', [
             'controller_name' => 'StoriesController',
             'series' => $series,
+            'updates' => $updates,
         ]);
     }
     /**

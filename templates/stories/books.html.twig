@@ -7,16 +7,28 @@
     <link rel="stylesheet" href="{{ asset('/style/Stories.css') }}">
 {% endblock %}
 {% block body %}
-    <div class="d-flex flex-row flex-wrap">
-        {% for serial in series %}
-            <a href="{{ path('app_serial',{'id':serial.id}) }}">
-                <button class="btn inc-bg-ldahners7 m-2">{{ serial.name }}</button>
-            </a>
-        {% endfor %}
+    <div class="d-flex inc-flex-orientation">
+        <div class="p-1">
+            <div class="d-flex flex-row flex-wrap">
+                {% for serial in series %}
+                    <a href="{{ path('app_serial',{'id':serial.id}) }}">
+                        <button class="btn inc-bg-ldahners7 m-2">{{ serial.name }}</button>
+                    </a>
+                {% endfor %}
+            </div>
+            <h2>Writing science fiction turns out to be a lot of fun!</h2>
+            <h3>Below are the covers of all of my books</h3>
+            <p>(Click on a cover to go to the store or the about button for more information)</p>
+        </div>
+        {% if updates|length > 0 %}
+        <div class="p-1">
+            <h2>Updates!</h2>
+            {% for update in updates %}
+                <div class="p-2">{% if update.book %}<a class="text-dark" href="{{ update.book.amazonLink }}">{{ update.book.name }}</a> {% endif %}{{ update.description }}{% if update.closeDescription %} {% if update.closeLink %}<a class="text-dark" href="{{ update.closeLink }}">{% endif %}{{ update.closeDescription }}{% if update.closeLink %}</a>{% endif %}{% endif %}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
     </div>
-    <h2>Writing science fiction turns out to be a lot of fun!</h2>
-    <h3>Below are the covers of all of my books</h3>
-    <p>(Click on a cover to go to the store or the about button for more information)</p>
     <div class="d-flex flex-column">
     {% for serial in series %}
         <div class="d=flex flex-column">
