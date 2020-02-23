@@ -8,7 +8,7 @@
 
 {% block body %}
 
-    <h2>Current Series
+    <h2>Current Updates
         <button class="btn m-2 inc-button-color inc-bg-ldahners7" onclick="window.location.href='{{ path('app_admin_new_update')|index_stripper }}'">New</button>
     </h2>
     <table class="inc-table inc-table-striped">
@@ -17,7 +17,7 @@
             <th>Book</th>
             <th>Description</th>
             <th>Closing</th>
-            <th>Delete Series</th>
+            <th>Delete Update</th>
         </tr>
         {# @var update \App\Entity\Updates #}
         {% for update in updates %}
