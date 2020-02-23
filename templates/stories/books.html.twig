@@ -4,65 +4,67 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('/style/Stories.css') }}">
+    <link rel="stylesheet" href="{{ asset('/style/StoriesV2.css') }}">
 {% endblock %}
-{% block body %}
-    <div class="d-flex inc-flex-orientation">
-        <div class="p-1">
-            <div class="d-flex flex-row flex-wrap">
-                {% for serial in series %}
-                    <a href="{{ path('app_serial',{'id':serial.id}) }}">
-                        <button class="btn inc-bg-ldahners7 m-2">{{ serial.name }}</button>
-                    </a>
-                {% endfor %}
-            </div>
-            <h2>Writing science fiction turns out to be a lot of fun!</h2>
-            <h3>Below are the covers of all of my books</h3>
-            <p>(Click on a cover to go to the store or the about button for more information)</p>
-        </div>
-        {% if updates|length > 0 %}
-        <div class="p-1">
-            <h2>Updates!</h2>
+{% block body_indentation %}
+    {% if updates|length > 0 %}
+        <div class="inc-bg-ldahners3-dark">
+            <h1 class="text-center display-1 story-emphatic">Updates!</h1>
             {% for update in updates %}
-                <div class="p-2">{% if update.book %}<a class="text-dark" href="{{ update.book.amazonLink }}">{{ update.book.name }}</a> {% endif %}{{ update.description }}{% if update.closeDescription %} {% if update.closeLink %}<a class="text-dark" href="{{ update.closeLink }}">{% endif %}{{ update.closeDescription }}{% if update.closeLink %}</a>{% endif %}{% endif %}</div>
+                <div class="pl-4 pt-3 pb-2 story-emphatic"><strong>{% if update.book %}<a class="" href="{{ update.book.amazonLink }}">{{ update.book.name }}</a> {% endif %}{{ update.description }}{% if update.closeDescription %} {% if update.closeLink %}<a class="" href="{{ update.closeLink }}">{% endif %}{{ update.closeDescription }}{% if update.closeLink %}</a>{% endif %}{% endif %}</strong></div>
             {% endfor %}
         </div>
-        {% endif %}
-    </div>
-    <div class="d-flex flex-column">
-    {% for serial in series %}
-        <div class="d=flex flex-column">
-            <h4>{{ serial.name }} <a href="{{ path('app_serial',{'id':serial.id}) }}" class="ml-2"><btn class="btn inc-bg-ldahners7 text-dark">Review of Series</btn></a></h4>
-            <p>{{ serial.description }}</p>
-            <div class="inc-flex-orientation">
-                <div class="books d-flex flex-wrap">
-                    {% for book in serial.books|sort((a, b) => a.OrderInSeries <=> b.OrderInSeries) %}
-                        <div class="inc-book-image">
-                            <a href="{{ book.AmazonLink }}">
-                                <img src="{{ vich_uploader_asset(book,'imageFile') }}">
-                            </a>
-                            <a href="{{ path('app_story',{'id':book.id}) }}">
-                                <button class="btn inc-bg-ldahners7 mx-auto d-block mt-2">About</button>
-                            </a>
-                        </div>
+    {% endif %}
+    <div class="inc-indentation mt-2">
+        <div class="d-flex inc-flex-orientation">
+            <div class="p-1">
+                <div class="d-flex flex-row flex-wrap">
+                    {% for serial in series %}
+                        <a href="{{ path('app_serial',{'id':serial.id}) }}">
+                            <button class="btn inc-bg-ldahners7 m-2">{{ serial.name }}</button>
+                        </a>
                     {% endfor %}
                 </div>
-                <div class="merchandise">
-                    {% for merchandise in serial.merchandise %}
-                        <div class="merch-item">
-                            <h4>{{ merchandise.name }}</h4>
-                            <p>{{ merchandise.description|change_return_to_break|raw }}</p>
-                            <a href="{{ merchandise.link }}">
-                                <div class="inc-book-image">
-                                    <img src="{{ vich_uploader_asset(merchandise,'imageFile') }}">
-                                </div>
-                            </a>
-                        </div>
-                    {% endfor %}
-                    <div class="inc-flex-grow"></div>
-                </div>
+                <h2>Writing science fiction turns out to be a lot of fun!</h2>
+                <h3>Below are the covers of all of my books</h3>
+                <p>(Click on a cover to go to the store or the about button for more information)</p>
             </div>
         </div>
-    {% endfor %}
+        <div class="d-flex flex-column">
+        {% for serial in series %}
+            <div class="d=flex flex-column">
+                <h4>{{ serial.name }} <a href="{{ path('app_serial',{'id':serial.id}) }}" class="ml-2"><btn class="btn inc-bg-ldahners7 text-dark">Review of Series</btn></a></h4>
+                <p>{{ serial.description }}</p>
+                <div class="inc-flex-orientation">
+                    <div class="books d-flex flex-wrap">
+                        {% for book in serial.books|sort((a, b) => a.OrderInSeries <=> b.OrderInSeries) %}
+                            <div class="inc-book-image">
+                                <a href="{{ book.AmazonLink }}">
+                                    <img src="{{ vich_uploader_asset(book,'imageFile') }}">
+                                </a>
+                                <a href="{{ path('app_story',{'id':book.id}) }}">
+                                    <button class="btn inc-bg-ldahners7 mx-auto d-block mt-2">About</button>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="merchandise">
+                        {% for merchandise in serial.merchandise %}
+                            <div class="merch-item">
+                                <h4>{{ merchandise.name }}</h4>
+                                <p>{{ merchandise.description|change_return_to_break|raw }}</p>
+                                <a href="{{ merchandise.link }}">
+                                    <div class="inc-book-image">
+                                        <img src="{{ vich_uploader_asset(merchandise,'imageFile') }}">
+                                    </div>
+                                </a>
+                            </div>
+                        {% endfor %}
+                        <div class="inc-flex-grow"></div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
     </div>
 {% endblock %}
