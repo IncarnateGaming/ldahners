@@ -595,7 +595,6 @@ html .inc-text-black {
   margin-right: auto;
   overflow-x: scroll;
   -ms-overflow-style: none;
-  height: 100%;
 }
 
 .inc-indentation::-webkit-scrollbar {

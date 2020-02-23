@@ -1,6 +1,6 @@
 let incScrolling = false;
 let incLastKnownScroll = 0;
-class LdahnersNavFunctions{
+class LdahnersNavFunctionsV2{
     static hideTop(){
         document.getElementById('topButton').style.display='none';
     }
@@ -11,20 +11,21 @@ class LdahnersNavFunctions{
         if(incScrolling === true){
             return true;
         }
+        console.log(window.scrollY);
         incScrolling = true;
         const navbarSupportedContent = document.getElementById('navbarSupportedContent');
         if(navbarSupportedContent === undefined || navbarSupportedContent.classList.contains('show') !== true) {
             if (window.scrollY === 0) {
                 document.getElementById('inc-top-html').classList.remove('hideNav');
-            } else if (incLastKnownScroll < window.scrollY) {
+            } else if (incLastKnownScroll < window.scrollY && window.scrollY > 500) {
                 document.getElementById('inc-top-html').classList.add('hideNav');
             } else if (incLastKnownScroll > window.scrollY) {
                 document.getElementById('inc-top-html').classList.remove('hideNav');
             }
             if (window.scrollY > 500) {
-                LdahnersNavFunctions.showTop();
+                LdahnersNavFunctionsV2.showTop();
             } else {
-                LdahnersNavFunctions.hideTop();
+                LdahnersNavFunctionsV2.hideTop();
             }
         }
         incLastKnownScroll = window.scrollY;
@@ -34,6 +35,6 @@ class LdahnersNavFunctions{
         window.scrollTo(0,0);
     }
 }
-window.addEventListener('scroll',LdahnersNavFunctions.changeNavOnScroll);
-document.getElementById('topButton').addEventListener('click',LdahnersNavFunctions.toTop);
-LdahnersNavFunctions.hideTop();
+window.addEventListener('scroll',LdahnersNavFunctionsV2.changeNavOnScroll);
+document.getElementById('topButton').addEventListener('click',LdahnersNavFunctionsV2.toTop);
+LdahnersNavFunctionsV2.hideTop();
