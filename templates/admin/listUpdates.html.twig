@@ -17,6 +17,8 @@
             <th>Book</th>
             <th>Description</th>
             <th>Closing</th>
+            <th>Size</th>
+            <th>Color</th>
             <th>Delete Update</th>
         </tr>
         {# @var update \App\Entity\Updates #}
@@ -28,6 +30,8 @@
                 <td>{% if update.book %}{{ update.book.name }}{% endif %}</td>
                 <td>{{ update.description }}</td>
                 <td>{% if update.closeLink and update.closeDescription %}<a href="{{ update.closeLink }}">{{ update.closeDescription }}</a>{% endif %}</td>
+                <td>{% if update.fontSize %}{{ update.fontSize }}{% else %}1{% endif %}</td>
+                <td>{% if update.fontColor %}{{ update.fontColor }}{% endif %}</td>
                 <td><button class="btn-warning delete-button" data-delete="{{ path('app_admin_delete_update',{
                         id: update.id
                     }) }}" data-label="{% if update.book %}{{ update.book.name }} {% endif %}{{ update.description }}">Delete</button></td>

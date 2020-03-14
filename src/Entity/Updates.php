@@ -41,6 +41,16 @@ class Updates
      */
     private $priority;
 
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $fontSize;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $fontColor;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -102,6 +112,30 @@ class Updates
     public function setPriority(int $priority): self
     {
         $this->priority = $priority;
+
+        return $this;
+    }
+
+    public function getFontSize(): ?float
+    {
+        return $this->fontSize;
+    }
+
+    public function setFontSize(?float $fontSize): self
+    {
+        $this->fontSize = $fontSize;
+
+        return $this;
+    }
+
+    public function getFontColor(): ?string
+    {
+        return $this->fontColor;
+    }
+
+    public function setFontColor(?string $fontColor): self
+    {
+        $this->fontColor = $fontColor;
 
         return $this;
     }

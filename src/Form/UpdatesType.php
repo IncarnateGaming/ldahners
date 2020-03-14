@@ -6,6 +6,7 @@ use App\Entity\Book;
 use App\Entity\Updates;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -35,6 +36,8 @@ class UpdatesType extends AbstractType
             ->add('priority',null,[
                 'label'=>'Priority of Update',
             ])
+            ->add('fontSize',NumberType::class)
+            ->add('fontColor')
         ;
     }
 

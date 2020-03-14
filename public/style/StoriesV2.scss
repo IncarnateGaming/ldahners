@@ -1,6 +1,8 @@
+html div .update-section{
+  font-size: 2em;
+}
 html div .story-emphatic{
   color:darkred;
-  font-size:2em;
   font-weight:bold;
   text-shadow: 2px 2px black;
 }
@@ -17,6 +19,9 @@ html div .story-emphatic a:hover{
 }
 html div h1.story-emphatic{
   font-size:4em;
+}
+.inc-bg-light-gray{
+  background-color: rgba(140,152,152,0.9);
 }
 .inc-book-image{
   width:10rem;
