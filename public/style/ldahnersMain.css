@@ -122,6 +122,10 @@ html .inc-bg-white {
   background-color: white;
 }
 
+.inc-bg-light-gray {
+  background-color: rgba(140, 152, 152, 0.9);
+}
+
 html .inc-text-ldahners1 {
   color: #BDF2FE;
 }
@@ -315,6 +319,10 @@ html .inc-bg-black {
 
 html .inc-bg-white {
   background-color: white;
+}
+
+.inc-bg-light-gray {
+  background-color: rgba(140, 152, 152, 0.9);
 }
 
 html .inc-text-ldahners1 {
@@ -516,6 +524,10 @@ html .inc-bg-black {
 
 html .inc-bg-white {
   background-color: white;
+}
+
+.inc-bg-light-gray {
+  background-color: rgba(140, 152, 152, 0.9);
 }
 
 html .inc-text-ldahners1 {
@@ -736,6 +748,10 @@ html .inc-text-black {
 }
 html body {
   height: 100vh;
+}
+
+.emphasis-paragraph {
+  font-size: 2em;
 }
 
 .inc-flex-300 {

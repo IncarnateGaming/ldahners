@@ -121,6 +121,10 @@ html .inc-bg-white {
   background-color: white;
 }
 
+.inc-bg-light-gray {
+  background-color: rgba(140, 152, 152, 0.9);
+}
+
 html .inc-text-ldahners1 {
   color: #BDF2FE;
 }

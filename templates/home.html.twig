@@ -1,8 +1,8 @@
 {%  extends 'base.html.twig' %}
 {% block title %}Laury Dahners{% endblock %}
-{% block body %}
+{% block body_indentation %}
     {% if updates|length > 0 %}
-        <div class="dark-background">
+        <div class="inc-bg-light-gray emphasis-paragraph dark-background">
             <h1 class="text-center">Updates!</h1>
             {% for update in updates %}
                 {%  if update.book %}
@@ -11,13 +11,15 @@
             {% endfor %}
         </div>
     {% endif %}
-    <h1 class="text-center">Laury Dahners</h1>
-    <div class="row">
-        <div class="col-md-8">
-            <img src="/assets/images/Laury sepia.jpg" class="mx-auto d-block img-fluid">
-        </div>
-        <div class="col-md-3 dark-background">
-            <p>Laury Dahners lives in Chapel Hill, North Carolina and enjoys composing and recording music as well as painting. Recently he's become interested in writing science fiction. For a day job he worked (retired now) as an orthopedic surgeon who taught at the University of North Carolina Medical School, Department of Orthopaedics. Thanks to his daughter <a href="http://www.elene.dahners.com/">Elene Dahners</a> for teaching him how to build his first website! And to Philip Lawrence of <a href="https://www.incarnategamingllc.com/hire/">Incarnate Gaming</a> for building this updated version!</p>
+    <div class="inc-indentation mt-2">
+        <h1 class="text-center">Laury Dahners</h1>
+        <div class="row">
+            <div class="col-md-8">
+                <img src="/assets/images/Laury sepia.jpg" class="mx-auto d-block img-fluid">
+            </div>
+            <div class="col-md-3 dark-background">
+                <p>Laury Dahners lives in Chapel Hill, North Carolina and enjoys composing and recording music as well as painting. Recently he's become interested in writing science fiction. For a day job he worked (retired now) as an orthopedic surgeon who taught at the University of North Carolina Medical School, Department of Orthopaedics. Thanks to his daughter <a href="http://www.elene.dahners.com/">Elene Dahners</a> for teaching him how to build his first website! And to Philip Lawrence of <a href="https://www.incarnategamingllc.com/hire/">Incarnate Gaming</a> for building this updated version!</p>
+            </div>
         </div>
     </div>
 {% endblock %}
