@@ -3,7 +3,6 @@
 {% block body_indentation %}
     {% if updates|length > 0 %}
         <div class="inc-bg-light-gray emphasis-paragraph dark-background">
-            <h1 class="text-center">Updates!</h1>
             {% for update in updates %}
                 {%  if update.book %}
                 <div class="pl-4 pt-3 pb-2 story-emphatic"{% if update.fontSize or update.fontColor%} style="{% if update.fontSize %}font-size:{{ update.fontSize }}em;{% endif %}{% if update.fontColor %}color:{{ update.fontColor }};{% endif %}{% endif %}"><strong>{% if update.book %}<a class="" href="{{ update.book.amazonLink }}"{% if update.fontColor %} style="color:{{ update.fontColor }};"{% endif %}>{{ update.book.name }}</a> {% endif %}{{ update.description }}{% if update.closeDescription %} {% if update.closeLink %}<a class="" href="{{ update.closeLink }}"{% if update.fontColor %} style="color:{{ update.fontColor }};"{% endif %}>{% endif %}{{ update.closeDescription }}{% if update.closeLink %}</a>{% endif %}{% endif %}</strong></div>
