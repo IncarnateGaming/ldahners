@@ -17,7 +17,9 @@
     <div class="inc-indentation mt-2">
         <div class="d-flex inc-flex-orientation">
             <div class="p-1">
-                <h3>Here are quick links to information about each of my series.</h3>
+                <h2>Novels and Short Stories</h2>
+                <p></p>
+                <h3>Here are quick links to information about each of my book series.</h3>
                 <div class="d-flex flex-row flex-wrap">
                     {% for serial in series %}
                         <a href="{{ path('app_serial',{'id':serial.id}) }}">
@@ -25,6 +27,7 @@
                         </a>
                     {% endfor %}
                 </div>
+                <p></p>
                 <h3>Below are the covers of all of my books</h3>
                 <p>(Click on a cover to go to the store or the about button for more information)</p>
             </div>
@@ -32,6 +35,7 @@
         <div class="d-flex flex-column">
         {% for serial in series %}
             <div class="d=flex flex-column">
+                <p></p>
                 <h4>{{ serial.name }} <a href="{{ path('app_serial',{'id':serial.id}) }}" class="ml-2"><btn class="btn inc-bg-ldahners7 text-dark">Review of Series</btn></a></h4>
                 <p>{{ serial.description }}</p>
                 <div class="inc-flex-orientation">
